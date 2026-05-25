@@ -1,8 +1,12 @@
 package com.dino.list.news.ui.screens.listing.components
 
 import androidx.compose.animation.ExperimentalSharedTransitionApi
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -11,6 +15,7 @@ import androidx.compose.material.icons.rounded.Favorite
 import androidx.compose.material.icons.rounded.FavoriteBorder
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -19,6 +24,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import com.dino.list.core.bounceEffectShape
 import com.dino.list.news.models.Article
 import com.dino.list.news.ui.screens.LocalNavAnimatedVisibilityScope
 import com.dino.list.news.ui.screens.LocalSharedTransitionScope
@@ -31,38 +37,24 @@ fun NewsCard(
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val sharedTransitionScope = LocalSharedTransitionScope.current
-    val animatedVisibilityScope = LocalNavAnimatedVisibilityScope.current
 
-    // Use OutlinedCard to support both border and selection styling effectively
-    OutlinedCard(
-        onClick = onClick,
+    val backGroundColour by animateColorAsState(
+        targetValue = if (isSelected) MaterialTheme.colorScheme.secondaryFixedDim else MaterialTheme.colorScheme.secondaryFixed,
+        animationSpec = spring(stiffness = Spring.StiffnessLow)
+    )
+
+
+    Box(
         modifier = modifier
             .fillMaxWidth()
             .padding(vertical = 8.dp, horizontal = 16.dp)
-            .then(
-                if (sharedTransitionScope != null && animatedVisibilityScope != null) {
-                    with(sharedTransitionScope) {
-                        Modifier.sharedBounds(
-                            rememberSharedContentState(key = "card-${article.id}"),
-                            animatedVisibilityScope = animatedVisibilityScope
-                        )
-                    }
-                } else Modifier
-            ),
-        shape = RoundedCornerShape(28.dp), // Highly rounded corners for "Expressive" look
-        colors = CardDefaults.outlinedCardColors(
-            containerColor = if (isSelected) MaterialTheme.colorScheme.secondaryContainer 
-                            else MaterialTheme.colorScheme.surface,
-        ),
-        elevation = CardDefaults.outlinedCardElevation(
-            defaultElevation = if (isSelected) 8.dp else 2.dp
-        ),
-        border = BorderStroke(
-            width = if (isSelected) 3.dp else 1.dp,
-            color = if (isSelected) MaterialTheme.colorScheme.primary 
-                    else MaterialTheme.colorScheme.outlineVariant
-        )
+            .bounceEffectShape(
+                scaleFactor = .9f,
+                initialShape = 24.dp,
+                pressedShape = 48.dp,
+                onClick = onClick
+            )
+            .background(color = backGroundColour)
     ) {
         Column {
             // Hero Image Section
@@ -75,18 +67,7 @@ fun NewsCard(
                 AsyncImage(
                     model = article.urlToImage,
                     contentDescription = null,
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .then(
-                            if (sharedTransitionScope != null && animatedVisibilityScope != null) {
-                                with(sharedTransitionScope) {
-                                    Modifier.sharedElement(
-                                        rememberSharedContentState(key = "image-${article.id}"),
-                                        animatedVisibilityScope = animatedVisibilityScope
-                                    )
-                                }
-                            } else Modifier
-                        ),
+                    modifier = Modifier.fillMaxSize(),
                     contentScale = ContentScale.Crop
                 )
 
@@ -97,7 +78,7 @@ fun NewsCard(
                     style = MaterialTheme.typography.displaySmall.copy(fontWeight = FontWeight.Black),
                     color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.1f)
                 )
-                
+
                 // Overlaid Category Badge
                 Surface(
                     modifier = Modifier
@@ -181,8 +162,8 @@ fun NewsCard(
                     IconButton(
                         onClick = { /* Handle bookmarking */ },
                         colors = IconButtonDefaults.iconButtonColors(
-                            contentColor = if (article.isBookmarked) MaterialTheme.colorScheme.primary 
-                                           else MaterialTheme.colorScheme.onSurfaceVariant
+                            contentColor = if (article.isBookmarked) MaterialTheme.colorScheme.primary
+                            else MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     ) {
                         Icon(

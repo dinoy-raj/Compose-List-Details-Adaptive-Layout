@@ -1,37 +1,110 @@
 package com.dino.list.news.ui.screens.listing
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.runtime.Composable
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.dino.list.news.mocks.topTechNewsToday
 import com.dino.list.news.ui.screens.listing.components.NewsCard
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ListingScreen(modifier: Modifier = Modifier, selectedId: String, onClick: (id: String) -> Unit) {
-    LazyColumn(
-        modifier = modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.spacedBy(24.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    )
-    {
-        item { Spacer(Modifier.height(8.dp)) }
+    var searchQuery by remember { mutableStateOf("") }
+    var expanded by remember { mutableStateOf(false) }
 
-        items(topTechNewsToday, key = {it.id})
-        {
-            NewsCard(
-                article = it,
-                isSelected = selectedId == it.id,
-                onClick = {onClick(it.id)},
-            )
+    val filteredNews = remember(searchQuery) {
+        if (searchQuery.isEmpty()) {
+            topTechNewsToday
+        } else {
+            topTechNewsToday.filter {
+                it.title.contains(searchQuery, ignoreCase = true) ||
+                        it.description.contains(searchQuery, ignoreCase = true) ||
+                        it.source.name.contains(searchQuery, ignoreCase = true)
+            }
+        }
+    }
+
+    Column(
+        modifier = modifier.fillMaxSize().background(color = MaterialTheme.colorScheme.surfaceVariant),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        SearchBar(
+            inputField = {
+                SearchBarDefaults.InputField(
+                    query = searchQuery,
+                    onQueryChange = { searchQuery = it },
+                    onSearch = { expanded = false },
+                    expanded = expanded,
+                    onExpandedChange = { expanded = it },
+                    placeholder = { Text("Search news...") },
+                    leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                    trailingIcon = {
+                        if (expanded) {
+                            IconButton(onClick = {
+                                if (searchQuery.isNotEmpty()) {
+                                    searchQuery = ""
+                                } else {
+                                    expanded = false
+                                }
+                            }) {
+                                Icon(Icons.Default.Close, contentDescription = null)
+                            }
+                        }
+                    }
+                )
+            },
+            expanded = expanded,
+            onExpandedChange = { expanded = it },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = if (expanded) 0.dp else 16.dp)
+                .padding(top = if (expanded) 0.dp else 8.dp)
+        ) {
+            LazyColumn(
+                modifier = Modifier.fillMaxSize(),
+                verticalArrangement = Arrangement.spacedBy(16.dp),
+                contentPadding = PaddingValues(16.dp)
+            ) {
+                items(filteredNews, key = { it.id }) {
+                    NewsCard(
+                        article = it,
+                        isSelected = selectedId == it.id,
+                        onClick = {
+                            onClick(it.id)
+                            expanded = false
+                        },
+                    )
+                }
+            }
         }
 
-        item { Spacer(Modifier.height(8.dp)) }
+        if (!expanded) {
+            LazyColumn(
+                modifier = Modifier.fillMaxSize(),
+                verticalArrangement = Arrangement.spacedBy(24.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                item { Spacer(Modifier.height(8.dp)) }
+
+                items(filteredNews, key = { it.id }) {
+                    NewsCard(
+                        article = it,
+                        isSelected = selectedId == it.id,
+                        onClick = { onClick(it.id) },
+                    )
+                }
+
+                item { Spacer(Modifier.height(8.dp)) }
+            }
+        }
     }
 }
