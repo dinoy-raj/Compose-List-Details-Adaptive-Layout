@@ -27,7 +27,8 @@ import com.dino.list.news.ui.screens.LocalSharedTransitionScope
 fun DetailsScreen(
     article: Article,
     onBack: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    showTopBar: Boolean = true
 ) {
     val sharedTransitionScope = LocalSharedTransitionScope.current
     val animatedVisibilityScope = LocalNavAnimatedVisibilityScope.current
@@ -45,6 +46,26 @@ fun DetailsScreen(
                     }
                 } else Modifier
             ),
+        topBar = {
+            if (showTopBar) {
+                TopAppBar(
+                    title = { },
+                    navigationIcon = {
+                        IconButton(onClick = onBack) {
+                            Icon(
+                                imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                                contentDescription = "Back"
+                            )
+                        }
+                    },
+                    actions = {
+                        IconButton(onClick = { /* Handle share */ }) {
+                            Icon(imageVector = Icons.Default.Share, contentDescription = "Share")
+                        }
+                    }
+                )
+            }
+        }
     ) { paddingValues ->
         LazyColumn(
             modifier = Modifier

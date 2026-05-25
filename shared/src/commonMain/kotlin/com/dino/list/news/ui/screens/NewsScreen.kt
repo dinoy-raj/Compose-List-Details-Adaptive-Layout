@@ -8,6 +8,7 @@ import androidx.compose.material3.adaptive.ExperimentalMaterial3AdaptiveApi
 import androidx.compose.material3.adaptive.layout.AnimatedPane
 import androidx.compose.material3.adaptive.layout.ListDetailPaneScaffold
 import androidx.compose.material3.adaptive.layout.ListDetailPaneScaffoldRole
+import androidx.compose.material3.adaptive.layout.PaneAdaptedValue
 import androidx.compose.material3.adaptive.navigation.rememberListDetailPaneScaffoldNavigator
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -40,6 +41,7 @@ fun NewsScreen(modifier: Modifier = Modifier)
                         CompositionLocalProvider(LocalNavAnimatedVisibilityScope provides this) {
                             ListingScreen(
                                 selectedId = navigator.currentDestination?.contentKey ?: "",
+                                isDualPane = navigator.scaffoldValue[ListDetailPaneScaffoldRole.Detail] == PaneAdaptedValue.Expanded,
                                 onClick = { id ->
                                     scope.launch {
                                         navigator.navigateTo(ListDetailPaneScaffoldRole.Detail, id)
@@ -58,6 +60,7 @@ fun NewsScreen(modifier: Modifier = Modifier)
                             if (article != null) {
                                 DetailsScreen(
                                     article = article,
+                                    showTopBar = navigator.scaffoldValue[ListDetailPaneScaffoldRole.List] == PaneAdaptedValue.Hidden,
                                     onBack = {
                                         if (navigator.canNavigateBack()) {
                                             scope.launch {
