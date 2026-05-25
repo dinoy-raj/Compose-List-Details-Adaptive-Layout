@@ -31,21 +31,19 @@ import coil3.compose.AsyncImage
 import com.dino.list.core.bounceEffectShape
 import com.dino.list.core.getRandomShape
 import com.dino.list.news.models.Article
-import com.dino.list.news.ui.screens.LocalNavAnimatedVisibilityScope
-import com.dino.list.news.ui.screens.LocalSharedTransitionScope
+
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalSharedTransitionApi::class)
 @Composable
 fun NewsCard(
     article: Article,
     isSelected: Boolean,
-    shape: Shape,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
 
     val backGroundColour by animateColorAsState(
-        targetValue = if (isSelected) MaterialTheme.colorScheme.secondaryContainer else MaterialTheme.colorScheme.surfaceContainerLow,
+        targetValue = if (isSelected) MaterialTheme.colorScheme.onSecondary else  MaterialTheme.colorScheme.background,
         animationSpec = spring(stiffness = Spring.StiffnessLow)
     )
 
@@ -53,7 +51,7 @@ fun NewsCard(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .padding(vertical = 8.dp, horizontal = 16.dp)
+            .padding(vertical = 8.dp, horizontal = 12.dp)
             .bounceEffectShape(
                 scaleFactor = .9f,
                 initialShape = 24.dp,
@@ -67,12 +65,13 @@ fun NewsCard(
             modifier = Modifier
                 .padding(horizontal = 4.dp)
                 .fillMaxWidth()
-                .padding(horizontal = 24.dp, vertical = 16.dp)
+                .padding(horizontal = 24.dp, vertical = 16.dp),
+            verticalAlignment = Alignment.CenterVertically
         ) {
             Box(
                 modifier = Modifier
-                    .size(80.dp)
-                    .clip(shape = shape)
+                    .size(100.dp)
+                    .clip(shape = MaterialShapes.Cookie7Sided.toShape())
             ) {
                 AsyncImage(
                     model = article.urlToImage,
@@ -109,7 +108,7 @@ fun NewsCard(
                         )
                     }
 
-                    Spacer(modifier = Modifier.height(2.dp))
+                    Spacer(modifier = Modifier.height(8.dp))
 
                     Text(
                         text = article.title,
@@ -122,17 +121,8 @@ fun NewsCard(
                         color = MaterialTheme.colorScheme.onSurface
                     )
 
-                    Spacer(modifier = Modifier.height(2.dp))
 
-                    Text(
-                        text = article.description,
-                        style = MaterialTheme.typography.bodySmall.copy( fontSize = 10.sp),
-                        maxLines = 2,
-                        overflow = TextOverflow.Ellipsis,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-
-                    Spacer(modifier = Modifier.height(4.dp))
+                    Spacer(modifier = Modifier.height(16.dp))
 
                     Row(
                         modifier = Modifier.fillMaxWidth(),
@@ -141,22 +131,9 @@ fun NewsCard(
                     ) {
                         Text(
                             text = "Published • ${article.publishedAt.take(10)}",
-                            style = MaterialTheme.typography.labelSmall.copy(fontSize = 10.sp),
+                            style = MaterialTheme.typography.labelSmall.copy(fontSize = 8.sp),
                             color = MaterialTheme.colorScheme.outline
                         )
-
-                        IconButton(
-                            onClick = { /* Handle bookmarking */ },
-                            colors = IconButtonDefaults.iconButtonColors(
-                                contentColor = if (article.isBookmarked) MaterialTheme.colorScheme.primary
-                                else MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        ) {
-                            Icon(
-                                imageVector = if (article.isBookmarked) Icons.Rounded.Favorite else Icons.Rounded.FavoriteBorder,
-                                contentDescription = "Bookmark"
-                            )
-                        }
                     }
                 }
             }

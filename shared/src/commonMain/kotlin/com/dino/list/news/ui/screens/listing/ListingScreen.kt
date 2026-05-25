@@ -58,7 +58,7 @@ fun ListingScreen(
             leadingIcon = {
                 Icon(
                     Icons.Default.Search,
-                    modifier = Modifier.size(20.dp),
+                    modifier = Modifier.size(18.dp),
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.onSecondaryContainer
                 )
@@ -72,7 +72,7 @@ fun ListingScreen(
                             expanded = false
                         }
                     }) {
-                        Icon(Icons.Default.Close, contentDescription = null)
+                        Icon(Icons.Default.Close, contentDescription = null, modifier = Modifier.size(18.dp),)
                     }
                 }
             }
@@ -82,14 +82,13 @@ fun ListingScreen(
     val resultsContent = @Composable {
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
             contentPadding = PaddingValues(16.dp)
         ) {
             items(filteredNews, key = { it.id }) {
                 NewsCard(
                     article = it,
                     isSelected = selectedId == it.id,
-                    shape = shape,
                     onClick = {
                         onClick(it.id)
                         expanded = false
@@ -134,7 +133,7 @@ fun ListingScreen(
         if (!expanded) {
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
-                verticalArrangement = Arrangement.spacedBy(16.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 item { Spacer(Modifier.height(8.dp)) }
@@ -143,7 +142,6 @@ fun ListingScreen(
                     NewsCard(
                         article = it,
                         isSelected = selectedId == it.id,
-                        shape = shape,
                         onClick = { onClick(it.id) },
                     )
                 }

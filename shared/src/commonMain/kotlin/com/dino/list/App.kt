@@ -114,6 +114,6 @@ fun NewsAppTheme(
 @Preview
 fun App() {
     NewsAppTheme {
-        NewsScreen(modifier = Modifier.background(color = MaterialTheme.colorScheme.background))
+        NewsScreen(modifier = Modifier.background(color = MaterialTheme.colorScheme.secondaryContainer))
     }
 }
