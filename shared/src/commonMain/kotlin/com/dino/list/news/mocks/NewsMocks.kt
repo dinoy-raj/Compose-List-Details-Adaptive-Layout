@@ -3,146 +3,202 @@ package com.dino.list.news.mocks
 import com.dino.list.news.models.Article
 import com.dino.list.news.models.Source
 
-val topTechNewsToday = listOf(
+val topAndroidDevBlogs = listOf(
 
     Article(
         id = "1",
-        source = Source(
-            id = "reuters",
-            name = "Reuters"
-        ),
-        author = "Reuters Staff",
-        title = "Google pushes deeper into AGI race with Gemini 3.5 and AI-first ecosystem",
-        description = "Google unveiled major AI updates during Google I/O 2026, doubling down on Gemini and AI-powered search.",
-        url = "https://www.reuters.com/technology/artificial-intelligence/googles-demis-hassabis-goes-offensive-2026-05-20/",
-        urlToImage = "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?q=80&w=1200&auto=format&fit=crop",
-        publishedAt = "2026-05-26T08:10:00Z",
+        source = Source(id = "medium", name = "Medium"),
+        author = "Android Poet",
+        title = "Compose Guard: Real-Time Best Practices for Jetpack Compose",
+        description = "A powerful IntelliJ plugin that catches Compose mistakes as you type.",
+        url = "https://androidpoet.medium.com/compose-guard-real-time-best-practices-for-jetpack-compose-602175550d16",
+        urlToImage = "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop",
+        publishedAt = "2026-05-24T12:00:00Z",
         content = """
-Google is aggressively expanding its artificial intelligence ecosystem following major announcements at Google I/O 2026. CEO Sundar Pichai and DeepMind chief Demis Hassabis showcased Gemini 3.5, improved coding assistants, AI-native search experiences, and new multimodal capabilities designed to compete directly with OpenAI and Anthropic.
+Writing clean, performant Jetpack Compose code is harder than it looks. The declarative paradigm brings its own set of conventions, and breaking them often leads to subtle bugs or performance issues that only surface later. That’s where Compose Guard comes in — a real-time inspector that catches common Compose mistakes as you type.
 
-The company also demonstrated AI integrations across Android, Workspace, and Search, turning traditional search experiences into conversational AI interfaces. Google believes the next phase of computing will revolve around proactive assistants capable of understanding user intent in real time.
+Every Compose developer has been there. You write what seems like perfectly reasonable code, ship it, and then discover during code review (or worse, in production) that you forgot to wrap mutableStateOf in remember, or you accidentally reused a modifier across multiple children. The official Compose API guidelines exist, but they’re lengthy and easy to forget.
 
-Industry analysts see this as one of Google's most important strategic pivots in years. The company is leveraging its cloud infrastructure, TPU hardware advantage, and massive product ecosystem to maintain leadership in the rapidly intensifying AI race.
+ComposeGuard integrates directly into IntelliJ IDEA and Android Studio. As you write Compose code, it analyzes your composables in real-time and provides visual feedback through inline highlighting, gutter icons, and hover tooltips. When it spots a violation, you can press Alt+Enter and apply an automatic fix.
+
+The plugin currently enforces 29 rules across six categories: naming conventions, modifier handling, state management, parameter ordering, composable structure, and stricter optional rules. Not every rule fits every codebase. ComposeGuard lets you disable rules globally through settings, or suppress them locally with annotations.
+
+The value of ComposeGuard isn’t just catching mistakes — it’s building muscle memory. After a few weeks of seeing inline warnings for parameter ordering or missing modifiers, these patterns become second nature. The plugin essentially embeds the Compose API guidelines directly into your development workflow.
         """.trimIndent(),
-        category = "technology",
-        readTime = "6 min read",
-        isBookmarked = false
-    ),
-
-    Article(
-        id = "2",
-        source = Source(
-            id = "the-verge",
-            name = "The Verge"
-        ),
-        author = "The Verge Staff",
-        title = "Google I/O 2026 introduces AI-generated Android app development",
-        description = "Developers can now generate full Android apps using natural language prompts.",
-        url = "https://www.theverge.com/tech/933415/google-io-2026-biggest-announcements-ai-gemini",
-        urlToImage = "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
-        publishedAt = "2026-05-26T06:30:00Z",
-        content = """
-One of the standout announcements at Google I/O 2026 was the introduction of AI-assisted Android app generation tools. Developers can now describe app functionality using natural language and generate production-ready UI, navigation flows, and backend integrations automatically.
-
-Google says the system is powered by Gemini Omni models trained specifically for developer workflows. The tooling integrates deeply with Android Studio and Compose, significantly reducing the time required to prototype and iterate on new mobile experiences.
-
-The move reflects a broader industry trend where software development is becoming increasingly AI-driven. While experienced developers are still essential for architecture and product decisions, repetitive implementation work is rapidly being automated.
-        """.trimIndent(),
-        category = "technology",
-        readTime = "5 min read",
-        isBookmarked = false
-    ),
-
-    Article(
-        id = "3",
-        source = Source(
-            id = "axios",
-            name = "Axios"
-        ),
-        author = "Mike Allen",
-        title = "Two hours changed the AI industry as OpenAI, Nvidia, and Anthropic made major moves",
-        description = "A series of announcements highlighted the accelerating pace of AI innovation.",
-        url = "https://www.axios.com/2026/05/21/ai-news-cycle-openai-anthropic-spacex",
-        urlToImage = "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop",
-        publishedAt = "2026-05-25T18:45:00Z",
-        content = """
-The artificial intelligence industry experienced a dramatic news cycle this week after several leading companies unveiled major developments within hours of each other. OpenAI revealed a reasoning model capable of solving a decades-old geometry problem, while Nvidia reported record-breaking AI infrastructure revenue.
-
-Anthropic also expanded its compute partnership with SpaceX, committing billions of dollars toward future AI infrastructure. Analysts believe these announcements signal that the industry is entering a phase where AI competition is increasingly defined by infrastructure scale and access to computing power.
-
-The rapid pace of announcements has intensified concerns around regulation, safety, and market concentration. Governments worldwide are now debating how to manage AI development without slowing innovation.
-        """.trimIndent(),
-        category = "ai",
+        category = "android",
         readTime = "7 min read",
         isBookmarked = false
     ),
 
     Article(
-        id = "4",
-        source = Source(
-            id = "indian-express",
-            name = "Indian Express"
-        ),
-        author = "Anil Sasi",
-        title = "OpenAI reportedly exploring AI-first smartphone with custom operating system",
-        description = "Reports suggest OpenAI could enter the hardware market with an AI-centric device.",
-        url = "https://indianexpress.com/article/explained/explained-sci-tech/chatgpt-openai-smartphones-rival-iphones-monetisation-10659740/",
-        urlToImage = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200&auto=format&fit=crop",
-        publishedAt = "2026-05-25T16:20:00Z",
+        id = "2",
+        source = Source(id = "medium", name = "Medium"),
+        author = "Anil Kumar",
+        title = "Jetpack Compose + Kotlin Tips Every Android Developer Should Know",
+        description = "Practical tips for writing clean, performant, and scalable Compose code.",
+        url = "https://medium.com/@anilkumar2681/jetpack-compose-kotlin-tips-every-android-developer-should-know-5520fe14eb80",
+        urlToImage = "https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=1200&auto=format&fit=crop",
+        publishedAt = "2026-05-23T15:30:00Z",
         content = """
-OpenAI is reportedly planning an AI-first smartphone that could fundamentally change how users interact with mobile devices. According to industry analysts, the company is exploring a device that replaces traditional apps with autonomous AI agents capable of performing tasks contextually.
+Jetpack Compose has transformed Android UI development, but writing clean and performant code requires deep understanding of its principles. Many developers use remember everywhere and later wonder why data is lost on screen rotation.
 
-The rumored device would reportedly feature a custom operating system deeply integrated with cloud and on-device AI models. Former Apple designer Jony Ive is also said to be collaborating with OpenAI on hardware concepts aimed at creating a more natural computing experience.
+Remember vs rememberSaveable – Know the Difference. Use remember for UI-only state and rememberSaveable for configuration changes like screen rotation. If losing state on rotation is a bug — remember is the reason.
 
-The move would place OpenAI in direct competition with Apple and Google in the consumer hardware market. Experts believe the future of mobile computing may revolve around intelligent assistants rather than app-centric interfaces.
+State Hoisting = Clean & Testable UI. Composable functions should be stateless whenever possible. Lifting state up to the parent makes your UI components reusable and much easier to test.
+
+Avoid Unnecessary Recompositions. Use stable data classes, derivedStateOf, and proper key parameters in LazyColumn. These small changes can dramatically improve scroll performance and overall app responsiveness.
+
+Always provide Modifier parameters to public composables. This enables callers to customize layout behavior and follows official Compose guidelines for better reusability across your app.
         """.trimIndent(),
-        category = "mobile",
+        category = "android",
+        readTime = "7 min read",
+        isBookmarked = false
+    ),
+
+    Article(
+        id = "3",
+        source = Source(id = "medium", name = "Medium"),
+        author = "Anand Gaur",
+        title = "Jetpack Compose Roadmap for Android Developers",
+        description = "Complete learning path from beginner to advanced Compose mastery.",
+        url = "https://medium.com/@anandgaur2207/jetpack-compose-roadmap-for-android-developers-7c4ebbf6638f",
+        urlToImage = "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
+        publishedAt = "2026-05-25T08:10:00Z",
+        content = """
+Jetpack Compose is Google’s modern UI toolkit for building native Android apps using a declarative approach. With Compose, you can write UI in pure Kotlin, handle state-driven UI updates effortlessly, and build modern UIs faster with less boilerplate.
+
+This roadmap will guide you from absolute beginner to advanced-level in Jetpack Compose — with practical milestones and learning steps. It simplifies and modernizes UI development for Android.
+
+Stage 1: Basics & Fundamentals. Start with introduction to Jetpack Compose and why it was introduced. Learn Compose vs XML key differences, setting up Compose in Android Studio, @Composable annotation, and @Preview for design-time preview.
+
+Progress to theming with Material 3, navigation using Navigation Compose, animations, and state management. Then tackle performance optimization, custom layouts, and integration with existing View-based code.
+
+Advanced topics include multi-module architecture, testing strategies with Compose Testing APIs, and Kotlin Multiplatform with Compose. Consistent practice and code review help internalize best practices faster than theoretical study alone.
+        """.trimIndent(),
+        category = "android",
+        readTime = "9 min read",
+        isBookmarked = false
+    ),
+
+    Article(
+        id = "4",
+        source = Source(id = "medium", name = "Medium"),
+        author = "Jaykishan Sewak",
+        title = "Best Architecture for Jetpack Compose in 2025: MVVM + Clean Architecture",
+        description = "Building scalable apps using modern architecture patterns with Compose.",
+        url = "https://medium.com/@jecky999/best-architecture-for-jetpack-compose-in-2025-mvvm-clean-architecture-guide-f3a3d903514b",
+        urlToImage = "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop",
+        publishedAt = "2026-05-22T09:45:00Z",
+        content = """
+The combination of Jetpack Compose, MVVM, and Clean Architecture leads to clean, testable, and scalable Android apps. It aligns perfectly with modern development needs in 2025.
+
+Clean Architecture solves the problem of bloated ViewModels and business logic leaking into UI by creating clear boundaries between layers. Each part of your codebase knows exactly what it should and shouldn’t do.
+
+The three core layers include data, domain, and presentation. In the presentation layer, MVVM handles UI state while Compose renders it declaratively.
+
+This architecture improves code readability, scalability, and testability. Teams adopting this pattern report faster feature development and easier maintenance of large codebases.
+
+Real-world projects benefit significantly from combining these patterns, especially when scaling to support multiple form factors like phones, tablets, and foldables.
+        """.trimIndent(),
+        category = "android",
         readTime = "6 min read",
         isBookmarked = false
     ),
 
     Article(
         id = "5",
-        source = Source(
-            id = "windows-central",
-            name = "Windows Central"
-        ),
-        author = "Kevin Okemwa",
-        title = "Former Microsoft executive claims company is losing momentum in AI",
-        description = "Questions are emerging about Microsoft Copilot engagement and AI spending.",
-        url = "https://www.windowscentral.com/artificial-intelligence/ex-microsoft-exec-says-the-company-blew-it-with-ai",
-        urlToImage = "https://images.unsplash.com/photo-1633419461186-7d40a38105ec?q=80&w=1200&auto=format&fit=crop",
-        publishedAt = "2026-05-25T14:00:00Z",
+        source = Source(id = "medium", name = "Medium"),
+        author = "Gaurav Kumar",
+        title = "10 Jetpack Compose Best Practices for Building Complex Android UIs",
+        description = "Real-world examples and techniques for mastering complex Compose interfaces.",
+        url = "https://medium.com/towardsdev/10-jetpack-compose-best-practices-for-building-complex-android-uis-with-real-world-examples-4cad53236cc3",
+        urlToImage = "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?q=80&w=1200&auto=format&fit=crop",
+        publishedAt = "2026-05-21T14:20:00Z",
         content = """
-A former Microsoft executive has publicly criticized the company's AI strategy, claiming Microsoft risks missing the broader AI opportunity despite its multibillion-dollar partnership with OpenAI. The criticism centers around low engagement with Microsoft Copilot and uncertainty about long-term adoption.
+Building complex UIs in Jetpack Compose requires discipline and adherence to proven patterns. Using stateless composables makes your code more reusable and easier to test across different scenarios.
 
-While Microsoft continues integrating AI across Windows, Office, and Azure, some analysts believe the company has struggled to define a compelling consumer-facing AI experience. Critics argue that embedding AI into existing products may not be enough to drive meaningful user behavior changes.
+Break down large screens into smaller, focused composables. This improves readability and allows better control over recomposition boundaries, preventing unnecessary UI updates.
 
-Microsoft executives responded by pointing to strong enterprise adoption and growing infrastructure investments. However, investors are increasingly scrutinizing the enormous costs associated with AI development and deployment.
+Always be aware of stability. Mark your data classes as @Immutable or @Stable when appropriate to help the Compose compiler optimize effectively and reduce recompositions.
+
+Use derivedStateOf for expensive calculations that depend on other state. This prevents unnecessary recompositions when parent state changes without affecting the derived value.
+
+Proper key usage in Lazy lists and careful management of side effects using LaunchedEffect are critical for performance in production apps with dynamic content.
         """.trimIndent(),
-        category = "technology",
-        readTime = "5 min read",
+        category = "android",
+        readTime = "7 min read",
         isBookmarked = false
     ),
 
     Article(
         id = "6",
-        source = Source(
-            id = "android-central",
-            name = "Android Central"
-        ),
-        author = "Brady Snyder",
-        title = "AI becomes central to Android experiences in 2026",
-        description = "Google's Gemini ecosystem is rapidly expanding across Android devices.",
-        url = "https://www.androidcentral.com/apps-software/ai/ai-2025-report-card",
+        source = Source(id = "medium", name = "Medium"),
+        author = "Manish Rana",
+        title = "State Management in Jetpack Compose: Best Practices",
+        description = "Mastering state handling for scalable and performant Android apps.",
+        url = "https://medium.com/@manishrana366/state-management-in-jetpack-compose-best-practices-ff04e09451af",
         urlToImage = "https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=1200&auto=format&fit=crop",
-        publishedAt = "2026-05-25T11:30:00Z",
+        publishedAt = "2026-05-25T10:00:00Z",
         content = """
-Artificial intelligence is becoming deeply integrated into the Android ecosystem as Google expands Gemini-powered experiences across phones, tablets, and wearables. Features such as multimodal assistants, contextual search, and AI-generated replies are now becoming standard across flagship devices.
+Jetpack Compose simplifies UI development in Android by promoting a declarative approach. However, effective state management is critical to building scalable and maintainable apps.
 
-Android experts believe the industry is moving away from standalone AI applications toward operating-system-level intelligence. Instead of launching separate tools, users increasingly expect AI to work invisibly in the background across messaging, navigation, productivity, and media consumption.
+This article outlines best practices for managing state in Compose, covering Unidirectional Data Flow (UDF), remember, derivedStateOf, performance optimizations, and edge-case considerations.
 
-Despite the rapid progress, questions remain around privacy, battery efficiency, and the long-term sustainability of cloud-dependent AI features. Device manufacturers are now investing heavily in on-device inference capabilities to reduce latency and protect user data.
+Keep state as close to usage as possible. Don’t hoist state higher than necessary. If only one composable needs the state, keep it there to minimize recomposition scope.
+
+Use data classes for complex state instead of multiple mutableStateOf calls. This groups related state and improves code organization significantly.
+
+Avoid recomposition traps by using remember and derivedStateOf appropriately. Apply Unidirectional Data Flow to control state and events for predictable behavior.
+        """.trimIndent(),
+        category = "android",
+        readTime = "6 min read",
+        isBookmarked = false
+    ),
+
+    Article(
+        id = "7",
+        source = Source(id = "medium", name = "Medium"),
+        author = "Jayant Kumar",
+        title = "3 Years with Jetpack Compose: Here's What I'd Tell My Past Self",
+        description = "Lessons learned from production experience with Compose over three years.",
+        url = "https://nameisjayant.medium.com/3-years-with-jetpack-compose-heres-what-i-d-tell-my-past-self-e1acbb2c6651",
+        urlToImage = "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop",
+        publishedAt = "2026-05-24T11:30:00Z",
+        content = """
+After three years of working with Jetpack Compose in production, several key lessons stand out. Early adoption required patience but paid off significantly in terms of development speed.
+
+Composition locals and custom modifiers became powerful tools once understood properly. They help reduce boilerplate while maintaining clean architecture and separation of concerns.
+
+Performance tuning through smart recomposition control was one of the biggest challenges. Learning to think in terms of stability transformed app responsiveness and user experience.
+
+Migration strategies from the View system to Compose should be incremental. Full rewrites are risky, but partial migrations can deliver value quickly to users.
+
+The developer experience continues to improve with each Android Studio release, making Compose development increasingly enjoyable and productive for large teams.
+        """.trimIndent(),
+        category = "android",
+        readTime = "6 min read",
+        isBookmarked = false
+    ),
+
+    Article(
+        id = "8",
+        source = Source(id = "medium", name = "Medium"),
+        author = "Sakhawat Hossain",
+        title = "I Made My Jetpack Compose Home Screen 3× Faster",
+        description = "Practical optimization techniques that delivered massive performance gains.",
+        url = "https://shakilbd.medium.com/i-made-my-jetpack-compose-home-screen-3-faster-heres-exactly-what-i-did-175e86f12bb5",
+        urlToImage = "https://images.unsplash.com/photo-1633419461186-7d40a38105ec?q=80&w=1200&auto=format&fit=crop",
+        publishedAt = "2026-05-23T16:45:00Z",
+        content = """
+Optimizing Jetpack Compose screens requires systematic measurement and targeted improvements. One developer achieved 3x faster rendering through careful refactoring and profiling.
+
+Key techniques included reducing recomposition scope, using stable parameters, and implementing proper key usage in lazy lists for better diffing.
+
+Layout profiling tools in Android Studio helped identify bottlenecks. Visualizing recomposition counts guided optimization efforts effectively throughout the process.
+
+Memory allocation patterns were analyzed and improved by minimizing object creation during composition phases, leading to smoother scrolling.
+
+The results demonstrate that with proper techniques, Compose can deliver buttery smooth performance even in complex, data-heavy UIs.
         """.trimIndent(),
         category = "android",
         readTime = "5 min read",
@@ -150,97 +206,51 @@ Despite the rapid progress, questions remain around privacy, battery efficiency,
     ),
 
     Article(
-        id = "7",
-        source = Source(
-            id = "business-standard",
-            name = "Business Standard"
-        ),
-        author = "Business Standard Staff",
-        title = "OpenAI ends Microsoft exclusivity and expands cloud partnerships",
-        description = "OpenAI is broadening infrastructure relationships beyond Microsoft Azure.",
-        url = "https://www.business-standard.com/technology/tech-news/openai-ends-microsoft-exclusivity-frees-path-for-amazon-google-deals-126042800471_1.html",
-        urlToImage = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop",
-        publishedAt = "2026-05-25T10:00:00Z",
-        content = """
-OpenAI is reportedly moving beyond its exclusive cloud relationship with Microsoft, opening the door for partnerships with Amazon Web Services and Google Cloud. The decision reflects the enormous infrastructure demands required to train and operate next-generation AI models.
-
-Amazon CEO Andy Jassy confirmed that OpenAI models would soon become available directly through AWS platforms. Industry experts believe diversification is necessary as AI companies seek greater flexibility, cost optimization, and access to specialized hardware.
-
-The development signals a broader shift in the AI ecosystem where infrastructure providers, chip makers, and AI labs are becoming increasingly interconnected. Analysts expect cloud competition around AI workloads to intensify significantly over the next two years.
-        """.trimIndent(),
-        category = "cloud",
-        readTime = "4 min read",
-        isBookmarked = false
-    ),
-
-    Article(
-        id = "8",
-        source = Source(
-            id = "times-of-india",
-            name = "Times of India"
-        ),
-        author = "TOI Tech Desk",
-        title = "Android XR and Gemini dominate Google I/O 2026 announcements",
-        description = "Google showcased Android XR, Gemini Omni, and AI-powered search upgrades.",
-        url = "https://timesofindia.indiatimes.com/technology/tech-news/google-i/o-2026-android-17-updates-android-xr-gemini-intelligence-and-other-things-to-expect/articleshow/131198172.cms",
-        urlToImage = "https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?q=80&w=1200&auto=format&fit=crop",
-        publishedAt = "2026-05-25T09:15:00Z",
-        content = """
-Google unveiled a series of ambitious AI and extended reality initiatives during Google I/O 2026. Among the most notable announcements were Android XR smart glasses, Gemini Omni multimodal AI systems, and deeper AI integration into Search and Chrome.
-
-The company demonstrated how AI assistants could interact visually with the environment in real time using camera-equipped wearables. Google also emphasized its goal of creating a seamless AI layer across all devices and services.
-
-Developers attending the conference highlighted the growing importance of multimodal computing, where voice, vision, and contextual awareness work together. Many analysts believe XR and AI convergence could define the next major computing platform after smartphones.
-        """.trimIndent(),
-        category = "xr",
-        readTime = "6 min read",
-        isBookmarked = false
-    ),
-
-    Article(
         id = "9",
-        source = Source(
-            id = "wikipedia",
-            name = "Wikipedia"
-        ),
-        author = "Wikipedia Contributors",
-        title = "Apple reportedly partners with Google Gemini for next-generation Siri",
-        description = "Apple is expected to integrate Gemini models into future Siri experiences.",
-        url = "https://en.wikipedia.org/wiki/Apple_Inc.",
-        urlToImage = "https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?q=80&w=1200&auto=format&fit=crop",
-        publishedAt = "2026-05-25T07:40:00Z",
+        source = Source(id = "medium", name = "Medium"),
+        author = "Anil Kumar",
+        title = "Clean Architecture in Android with Jetpack Compose: The 2025 Practical Guide",
+        description = "Building scalable apps using modern architecture patterns with Compose.",
+        url = "https://medium.com/@anilkumar2681/clean-architecture-in-android-with-jetpack-compose-the-2025-practical-guide-c7357bce9136",
+        urlToImage = "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop",
+        publishedAt = "2026-05-22T13:20:00Z",
         content = """
-Reports indicate Apple may rely on Google's Gemini models to power future AI experiences inside Siri and other Apple services. The move highlights increasing pressure on Apple to accelerate its AI roadmap amid growing competition from Google, Microsoft, and OpenAI.
+Clean Architecture principles remain highly relevant in the Compose era. Separating concerns across layers ensures testability and maintainability as apps grow in complexity.
 
-Apple has traditionally focused on privacy-centric and tightly controlled ecosystems, but the rapid pace of generative AI development appears to be forcing new strategic partnerships. Analysts believe integrating Gemini could help Apple close the feature gap more quickly.
+Use cases should remain pure and independent of UI frameworks. This allows easy sharing of business logic via Kotlin Multiplatform in the future.
 
-The partnership would mark a surprising shift in the relationship between two long-time competitors. It also demonstrates how even the world's largest tech companies are increasingly collaborating around foundational AI infrastructure.
+Hilt for dependency injection combined with ViewModels and Compose state handling creates a robust architecture foundation that scales well.
+
+Repository pattern with proper data source abstraction handles offline scenarios elegantly using Room and remote data sources.
+
+This combination of Clean Architecture and Jetpack Compose represents the current state-of-the-art for professional Android development in 2025 and beyond.
         """.trimIndent(),
-        category = "apple",
-        readTime = "5 min read",
+        category = "android",
+        readTime = "7 min read",
         isBookmarked = false
     ),
 
     Article(
         id = "10",
-        source = Source(
-            id = "india-ai",
-            name = "India AI Summit"
-        ),
-        author = "Summit Staff",
-        title = "India expands sovereign AI ambitions with massive GPU investments",
-        description = "India announced major investments in AI infrastructure and compute capacity.",
-        url = "https://en.wikipedia.org/wiki/India_AI_Impact_Summit_2026",
-        urlToImage = "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
-        publishedAt = "2026-05-25T06:00:00Z",
+        source = Source(id = "medium", name = "Medium"),
+        author = "Halil Özel",
+        title = "Jetpack Compose Basics: A Beginner's Guide",
+        description = "Essential concepts for developers new to declarative UI on Android.",
+        url = "https://halilozel1903.medium.com/jetpack-compose-basics-a-beginners-guide-c5711cc346c0",
+        urlToImage = "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
+        publishedAt = "2026-05-19T18:00:00Z",
         content = """
-India is accelerating its push toward sovereign artificial intelligence infrastructure through large-scale investments in GPUs, research funding, and domestic AI ecosystems. Officials announced plans to significantly expand compute availability through the IndiaAI initiative.
+Jetpack Compose is Android's modern toolkit for building native UIs using Kotlin. It eliminates much of the traditional XML and View binding boilerplate that developers used to deal with.
 
-The strategy aims to reduce dependence on foreign AI infrastructure while enabling startups, researchers, and enterprises to build locally optimized AI systems. Microsoft and other global companies also announced investments tied to AI development in India.
+Composables are the fundamental building blocks. They are regular Kotlin functions annotated with @Composable that describe your UI in a declarative way.
 
-Industry leaders believe India could become one of the most important AI growth markets over the next decade. The country's software talent pool, startup ecosystem, and growing digital infrastructure position it as a major global technology player.
+State management drives UI updates. Whenever state changes, Compose intelligently recomposes only the affected parts of the UI tree for efficiency.
+
+Modifiers allow you to customize layout, appearance, and behavior of composables in a flexible and chainable way, similar to CSS but in code.
+
+Understanding these basics provides a strong foundation for building more complex and performant applications with Compose as you advance in your Android journey.
         """.trimIndent(),
-        category = "india-tech",
+        category = "android",
         readTime = "5 min read",
         isBookmarked = false
     )

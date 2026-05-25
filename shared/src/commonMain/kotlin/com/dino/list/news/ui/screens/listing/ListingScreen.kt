@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.dino.list.core.getRandomShape
-import com.dino.list.news.mocks.topTechNewsToday
+import com.dino.list.news.mocks.topAndroidDevBlogs
 import com.dino.list.news.ui.screens.listing.components.NewsCard
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -31,9 +31,9 @@ fun ListingScreen(
 
     val filteredNews = remember(searchQuery) {
         if (searchQuery.isEmpty()) {
-            topTechNewsToday
+            topAndroidDevBlogs
         } else {
-            topTechNewsToday.filter {
+            topAndroidDevBlogs.filter {
                 it.title.contains(searchQuery, ignoreCase = true) ||
                         it.description.contains(searchQuery, ignoreCase = true) ||
                         it.source.name.contains(searchQuery, ignoreCase = true)

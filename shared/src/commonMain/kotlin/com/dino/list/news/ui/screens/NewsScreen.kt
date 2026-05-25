@@ -15,7 +15,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
-import com.dino.list.news.mocks.topTechNewsToday
+import com.dino.list.news.mocks.topAndroidDevBlogs
 import com.dino.list.news.ui.screens.details.DetailsScreen
 import com.dino.list.news.ui.screens.listing.ListingScreen
 import kotlinx.coroutines.launch
@@ -55,7 +55,7 @@ fun NewsScreen(modifier: Modifier = Modifier)
                     AnimatedPane {
                         CompositionLocalProvider(LocalNavAnimatedVisibilityScope provides this) {
                             val articleId = navigator.currentDestination?.contentKey
-                            val article = topTechNewsToday.find { it.id == articleId }
+                            val article = topAndroidDevBlogs.find { it.id == articleId }
 
                             if (article != null) {
                                 DetailsScreen(
