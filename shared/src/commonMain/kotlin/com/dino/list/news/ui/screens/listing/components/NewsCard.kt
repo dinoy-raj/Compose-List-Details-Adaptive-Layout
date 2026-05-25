@@ -4,7 +4,6 @@ import androidx.compose.animation.ExperimentalSharedTransitionApi
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
@@ -42,7 +41,7 @@ fun NewsCard(
     isSelected: Boolean,
     shape: Shape,
     onClick: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
 
     val backGroundColour by animateColorAsState(
@@ -85,10 +84,11 @@ fun NewsCard(
 
             Box(modifier = Modifier.weight(1f).padding(start = 16.dp))
             {
-                Column() {
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(2.dp)
+                Column {
+                    FlowRow(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalArrangement = Arrangement.Center,
+                        horizontalArrangement = Arrangement.spacedBy(4.dp)
                     ) {
                         Text(
                             text = article.source.name,
@@ -97,13 +97,14 @@ fun NewsCard(
                         )
                         Box(
                             modifier = Modifier
+                                .align(Alignment.CenterVertically)
                                 .size(4.dp)
                                 .clip(CircleShape)
                                 .background(MaterialTheme.colorScheme.outlineVariant)
                         )
                         Text(
                             text = article.readTime,
-                            style = MaterialTheme.typography.labelSmall,
+                            style = MaterialTheme.typography.labelSmall.copy(fontSize = 10.sp),
                             color = MaterialTheme.colorScheme.outline
                         )
                     }

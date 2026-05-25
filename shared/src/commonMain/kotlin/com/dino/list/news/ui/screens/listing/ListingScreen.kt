@@ -12,6 +12,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.dino.list.core.getRandomShape
 import com.dino.list.news.mocks.topTechNewsToday
 import com.dino.list.news.ui.screens.listing.components.NewsCard
@@ -47,8 +48,21 @@ fun ListingScreen(
             onSearch = { expanded = false },
             expanded = expanded,
             onExpandedChange = { expanded = it },
-            placeholder = { Text("Search news...") },
-            leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+            placeholder = {
+                Text(
+                    "Search news...",
+                    style = MaterialTheme.typography.labelSmall.copy(fontSize = 10.sp),
+                    color = MaterialTheme.colorScheme.onSecondaryContainer
+                )
+            },
+            leadingIcon = {
+                Icon(
+                    Icons.Default.Search,
+                    modifier = Modifier.size(20.dp),
+                    contentDescription = null,
+                    tint = MaterialTheme.colorScheme.onSecondaryContainer
+                )
+            },
             trailingIcon = {
                 if (expanded) {
                     IconButton(onClick = {
@@ -86,7 +100,8 @@ fun ListingScreen(
     }
 
     Column(
-        modifier = modifier.fillMaxSize().background(color = MaterialTheme.colorScheme.surfaceVariant),
+        modifier = modifier.fillMaxSize()
+            .background(color = MaterialTheme.colorScheme.surfaceVariant),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         if (isDualPane) {
