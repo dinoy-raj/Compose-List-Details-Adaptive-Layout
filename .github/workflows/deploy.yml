@@ -39,7 +39,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: webApp/build/dist
+          path: webApp/build/dist/composeWebCompatibility/productionExecutable
 
   deploy:
     needs: build
