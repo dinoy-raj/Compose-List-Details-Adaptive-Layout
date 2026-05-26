@@ -15,15 +15,53 @@ val topAndroidDevBlogs = listOf(
         urlToImage = "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop",
         publishedAt = "2026-05-24T12:00:00Z",
         content = """
-Writing clean, performant Jetpack Compose code is harder than it looks. The declarative paradigm brings its own set of conventions, and breaking them often leads to subtle bugs or performance issues that only surface later. That’s where Compose Guard comes in — a real-time inspector that catches common Compose mistakes as you type.
+The goal of Search has always been simple: to help you ask anything on your mind — from quick facts to the deep, complex or hyper-specific questions that can be hard to articulate.
+To make this possible, we’ve continued to reimagine what Search can do with AI. The momentum has been incredible: Just one year after its debut, AI Mode has surpassed one billion monthly users, with queries more than doubling every quarter since launch. As people have realized just how much more Search can do for them, they’re searching more than ever before — so much so that last quarter, we saw queries reach an all-time high.
+Today at I/O, we shared the next step in our journey to bring together the best of a search engine with the best of AI. Here's a look at what we announced.
 
-Every Compose developer has been there. You write what seems like perfectly reasonable code, ship it, and then discover during code review (or worse, in production) that you forgot to wrap mutableStateOf in remember, or you accidentally reused a modifier across multiple children. The official Compose API guidelines exist, but they’re lengthy and easy to forget.
 
-ComposeGuard integrates directly into IntelliJ IDEA and Android Studio. As you write Compose code, it analyzes your composables in real-time and provides visual feedback through inline highlighting, gutter icons, and hover tooltips. When it spots a violation, you can press Alt+Enter and apply an automatic fix.
+Starting today, we’re upgrading Search with Gemini 3.5 Flash — our newest Flash model delivering sustained frontier performance for agents and coding — as the new default model in AI Mode for everyone globally.
+Because your curiosity doesn’t always fit into keywords, we’re also introducing the biggest upgrade to our Search box in over 25 years — now completely reimagined with AI. This intelligent Search box puts our most powerful AI tools right at your fingertips, making it easier to ask your questions.
 
-The plugin currently enforces 29 rules across six categories: naming conventions, modifier handling, state management, parameter ordering, composable structure, and stricter optional rules. Not every rule fits every codebase. ComposeGuard lets you disable rules globally through settings, or suppress them locally with annotations.
 
-The value of ComposeGuard isn’t just catching mistakes — it’s building muscle memory. After a few weeks of seeing inline warnings for parameter ordering or missing modifiers, these patterns become second nature. The plugin essentially embeds the Compose API guidelines directly into your development workflow.
+It’s more intuitive than ever, dynamically expanding to give you space to describe exactly what you need. Designed to anticipate your intent, it also helps you formulate your question with AI-powered suggestions that go beyond autocomplete. And you can search across modalities, using text, images, files, videos or Chrome tabs as inputs. You’ll continue to get a range of results from Search, just like you do today. The new intelligent Search box is starting to roll out today, in all countries and languages where AI Mode is available.
+We’re also making it even simpler to continue the conversation with Search. You can easily ask a follow-up question right from an AI Overview, and flow into a conversational back and forth with AI Mode. Your context stays with you, and as you explore more deeply, the links and supporting articles get even more relevant. This seamless experience is live today across desktop and mobile, worldwide.
+
+
+We’re entering the era of Search agents, where you can easily create, customize and manage multiple AI agents for your many tasks, right in Search. We’re starting with information agents. Operating in the background, 24/7, these agents intelligently reason across information to find exactly what you need at exactly the right moment.
+With information agents, you can stay updated on whatever matters most to you. Your agent will intelligently look across everything on the web, like blogs, news sites and social posts, plus our freshest data, such as real-time info on finance, shopping and sports, to monitor for changes related to your specific question.
+It will send you an intelligent, synthesized update, with the ability to take action. So if you’re apartment hunting, you can brain dump all of the exact requirements you’re looking for, and your agent will continuously scan for you, notifying you when listings meet your needs. Or if you want to know the instant any of your favorite pro athletes announce a sneaker collab, your agent will let you know when a new drop lands so you don’t miss out. Information agents will launch first for Google AI Pro & Ultra subscribers this summer.
+
+
+We’re also expanding agentic booking capabilities in Search to a wide range of new tasks, including local experiences and services. Just share your specific criteria — like finding a private karaoke room for six on a Friday night that serves food late — and Search brings together the latest pricing and availability with direct links to finish booking through the provider of your choice. And for select categories like home repair, beauty or pet care, you can ask Google to call businesses on your behalf. These capabilities will roll out to everyone in the U.S. this summer.
+
+
+We’re bringing the power of Google Antigravity and the agentic coding capabilities of Gemini 3.5 Flash right into Search. Search can build the ideal response, in the right format for your question — completely on the fly. So you can get custom generative UI, including visual tools and simulations, tailored precisely to your needs.
+Whether you want to wrap your mind around astrophysics or visualize how your watch works, Search can design custom layouts, assembling components (like interactive visuals, tables, graphs or simulations) in real-time. These generative UI capabilities will be available for everyone in Search this summer, free of charge.
+Finally, for AI to be most helpful, it shouldn't just know the world’s information, it should understand your context, too. So today, we’re expanding Personal Intelligence in AI Mode to more people in nearly 200 countries and territories across 98 languages — no subscription required. You can securely connect apps like Gmail and Google Photos, and soon Google Calendar. Personal Intelligence was designed with transparency, choice and control at its core. You’re always in control — you choose if and when you want to connect apps like Gmail and Google Photos.
+This is the next chapter of Google Search: intelligent AI that puts the world’s information to work for you. So ask whatever’s on your mind, and Search can now do more for you than ever before
+
+
+It’s been a banner year for the Gemini app. Last year at Google I/O, Gemini was serving 400 million users. Today, more than 900 million people across 230 countries and more than 70 languages turn to Gemini for help every month.
+In time for Google I/O 2026, here’s what's new:
+Gemini 3.5 Flash: The first in our next generation of models that combines frontier intelligence with lightning-fast action.
+Neural Expressive: A vibrant, dynamic and completely reimagined design language for Gemini.
+Gemini Omni: Our new model that can seamlessly transform text, images and video prompts into cinematic, high-quality video outputs.
+Daily Brief: A new agent that gives you a personalized morning brief and organizes exactly what you need to know to start your day.
+Gemini Spark: A 24/7 personal AI agent designed to proactively manage tasks and help you navigate your digital life, all under your direction.
+MacOS app: Our desktop app will be integrating Gemini Spark so it can operate on your local machine, and it will also add powerful new voice features.
+
+
+We’ve redesigned the entire Gemini experience from the ground up, introducing a stunning new design language we call Neural Expressive. The interface now features fluid animations, vibrant colors, new typography and haptic feedback.
+We’ve also integrated the Gemini Live conversational experience directly into Gemini. Now, you can seamlessly switch from typing a quick question to diving deep into a free-flowing conversation — and back again — without missing a beat. We also re-engineered the mic so you can tap and talk through a complex idea at your own pace without getting cut off mid-thought. And soon, we’ll start offering regional dialects, allowing you to choose a voice that truly resonates with you.
+Finally, we’re using the power of our Gemini models to make responses more engaging and easier to understand. Instead of throwing a wall of text at you, Gemini now designs tailored responses in real time — incorporating rich imagery, interactive timelines, narrated videos and dynamic graphics.
+Neural Expressive is rolling out globally today across the web, Android and iOS for everyone.
+
+
+To unlock your creative potential, we're introducing Gemini Omni, a model designed to turn your imagination into reality. By seamlessly combining text, images and video inputs, Gemini Omni allows you to generate stunning, high-quality video outputs effortlessly.
+With Gemini Omni, video editing becomes a fluid, natural conversation. You can apply cinematic zooms or swap out backgrounds with a simple prompt. Just upload footage from your camera roll, apply built-in templates with a single tap and create polished content without expensive equipment or specialized technical jargon. You can even drop yourself directly into the action by creating a custom AI avatar that looks and sounds exactly like you.
+Gemini Omni begins rolling out today to Google AI Plus, Pro and Ultra subscribers worldwide
+
         """.trimIndent(),
         category = "android",
         readTime = "7 min read",
@@ -40,15 +78,53 @@ The value of ComposeGuard isn’t just catching mistakes — it’s building mus
         urlToImage = "https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=1200&auto=format&fit=crop",
         publishedAt = "2026-05-23T15:30:00Z",
         content = """
-Jetpack Compose has transformed Android UI development, but writing clean and performant code requires deep understanding of its principles. Many developers use remember everywhere and later wonder why data is lost on screen rotation.
+The goal of Search has always been simple: to help you ask anything on your mind — from quick facts to the deep, complex or hyper-specific questions that can be hard to articulate.
+To make this possible, we’ve continued to reimagine what Search can do with AI. The momentum has been incredible: Just one year after its debut, AI Mode has surpassed one billion monthly users, with queries more than doubling every quarter since launch. As people have realized just how much more Search can do for them, they’re searching more than ever before — so much so that last quarter, we saw queries reach an all-time high.
+Today at I/O, we shared the next step in our journey to bring together the best of a search engine with the best of AI. Here's a look at what we announced.
 
-Remember vs rememberSaveable – Know the Difference. Use remember for UI-only state and rememberSaveable for configuration changes like screen rotation. If losing state on rotation is a bug — remember is the reason.
 
-State Hoisting = Clean & Testable UI. Composable functions should be stateless whenever possible. Lifting state up to the parent makes your UI components reusable and much easier to test.
+Starting today, we’re upgrading Search with Gemini 3.5 Flash — our newest Flash model delivering sustained frontier performance for agents and coding — as the new default model in AI Mode for everyone globally.
+Because your curiosity doesn’t always fit into keywords, we’re also introducing the biggest upgrade to our Search box in over 25 years — now completely reimagined with AI. This intelligent Search box puts our most powerful AI tools right at your fingertips, making it easier to ask your questions.
 
-Avoid Unnecessary Recompositions. Use stable data classes, derivedStateOf, and proper key parameters in LazyColumn. These small changes can dramatically improve scroll performance and overall app responsiveness.
 
-Always provide Modifier parameters to public composables. This enables callers to customize layout behavior and follows official Compose guidelines for better reusability across your app.
+It’s more intuitive than ever, dynamically expanding to give you space to describe exactly what you need. Designed to anticipate your intent, it also helps you formulate your question with AI-powered suggestions that go beyond autocomplete. And you can search across modalities, using text, images, files, videos or Chrome tabs as inputs. You’ll continue to get a range of results from Search, just like you do today. The new intelligent Search box is starting to roll out today, in all countries and languages where AI Mode is available.
+We’re also making it even simpler to continue the conversation with Search. You can easily ask a follow-up question right from an AI Overview, and flow into a conversational back and forth with AI Mode. Your context stays with you, and as you explore more deeply, the links and supporting articles get even more relevant. This seamless experience is live today across desktop and mobile, worldwide.
+
+
+We’re entering the era of Search agents, where you can easily create, customize and manage multiple AI agents for your many tasks, right in Search. We’re starting with information agents. Operating in the background, 24/7, these agents intelligently reason across information to find exactly what you need at exactly the right moment.
+With information agents, you can stay updated on whatever matters most to you. Your agent will intelligently look across everything on the web, like blogs, news sites and social posts, plus our freshest data, such as real-time info on finance, shopping and sports, to monitor for changes related to your specific question.
+It will send you an intelligent, synthesized update, with the ability to take action. So if you’re apartment hunting, you can brain dump all of the exact requirements you’re looking for, and your agent will continuously scan for you, notifying you when listings meet your needs. Or if you want to know the instant any of your favorite pro athletes announce a sneaker collab, your agent will let you know when a new drop lands so you don’t miss out. Information agents will launch first for Google AI Pro & Ultra subscribers this summer.
+
+
+We’re also expanding agentic booking capabilities in Search to a wide range of new tasks, including local experiences and services. Just share your specific criteria — like finding a private karaoke room for six on a Friday night that serves food late — and Search brings together the latest pricing and availability with direct links to finish booking through the provider of your choice. And for select categories like home repair, beauty or pet care, you can ask Google to call businesses on your behalf. These capabilities will roll out to everyone in the U.S. this summer.
+
+
+We’re bringing the power of Google Antigravity and the agentic coding capabilities of Gemini 3.5 Flash right into Search. Search can build the ideal response, in the right format for your question — completely on the fly. So you can get custom generative UI, including visual tools and simulations, tailored precisely to your needs.
+Whether you want to wrap your mind around astrophysics or visualize how your watch works, Search can design custom layouts, assembling components (like interactive visuals, tables, graphs or simulations) in real-time. These generative UI capabilities will be available for everyone in Search this summer, free of charge.
+Finally, for AI to be most helpful, it shouldn't just know the world’s information, it should understand your context, too. So today, we’re expanding Personal Intelligence in AI Mode to more people in nearly 200 countries and territories across 98 languages — no subscription required. You can securely connect apps like Gmail and Google Photos, and soon Google Calendar. Personal Intelligence was designed with transparency, choice and control at its core. You’re always in control — you choose if and when you want to connect apps like Gmail and Google Photos.
+This is the next chapter of Google Search: intelligent AI that puts the world’s information to work for you. So ask whatever’s on your mind, and Search can now do more for you than ever before
+
+
+It’s been a banner year for the Gemini app. Last year at Google I/O, Gemini was serving 400 million users. Today, more than 900 million people across 230 countries and more than 70 languages turn to Gemini for help every month.
+In time for Google I/O 2026, here’s what's new:
+Gemini 3.5 Flash: The first in our next generation of models that combines frontier intelligence with lightning-fast action.
+Neural Expressive: A vibrant, dynamic and completely reimagined design language for Gemini.
+Gemini Omni: Our new model that can seamlessly transform text, images and video prompts into cinematic, high-quality video outputs.
+Daily Brief: A new agent that gives you a personalized morning brief and organizes exactly what you need to know to start your day.
+Gemini Spark: A 24/7 personal AI agent designed to proactively manage tasks and help you navigate your digital life, all under your direction.
+MacOS app: Our desktop app will be integrating Gemini Spark so it can operate on your local machine, and it will also add powerful new voice features.
+
+
+We’ve redesigned the entire Gemini experience from the ground up, introducing a stunning new design language we call Neural Expressive. The interface now features fluid animations, vibrant colors, new typography and haptic feedback.
+We’ve also integrated the Gemini Live conversational experience directly into Gemini. Now, you can seamlessly switch from typing a quick question to diving deep into a free-flowing conversation — and back again — without missing a beat. We also re-engineered the mic so you can tap and talk through a complex idea at your own pace without getting cut off mid-thought. And soon, we’ll start offering regional dialects, allowing you to choose a voice that truly resonates with you.
+Finally, we’re using the power of our Gemini models to make responses more engaging and easier to understand. Instead of throwing a wall of text at you, Gemini now designs tailored responses in real time — incorporating rich imagery, interactive timelines, narrated videos and dynamic graphics.
+Neural Expressive is rolling out globally today across the web, Android and iOS for everyone.
+
+
+To unlock your creative potential, we're introducing Gemini Omni, a model designed to turn your imagination into reality. By seamlessly combining text, images and video inputs, Gemini Omni allows you to generate stunning, high-quality video outputs effortlessly.
+With Gemini Omni, video editing becomes a fluid, natural conversation. You can apply cinematic zooms or swap out backgrounds with a simple prompt. Just upload footage from your camera roll, apply built-in templates with a single tap and create polished content without expensive equipment or specialized technical jargon. You can even drop yourself directly into the action by creating a custom AI avatar that looks and sounds exactly like you.
+Gemini Omni begins rolling out today to Google AI Plus, Pro and Ultra subscribers worldwide
+
         """.trimIndent(),
         category = "android",
         readTime = "7 min read",
@@ -65,15 +141,53 @@ Always provide Modifier parameters to public composables. This enables callers t
         urlToImage = "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
         publishedAt = "2026-05-25T08:10:00Z",
         content = """
-Jetpack Compose is Google’s modern UI toolkit for building native Android apps using a declarative approach. With Compose, you can write UI in pure Kotlin, handle state-driven UI updates effortlessly, and build modern UIs faster with less boilerplate.
+The goal of Search has always been simple: to help you ask anything on your mind — from quick facts to the deep, complex or hyper-specific questions that can be hard to articulate.
+To make this possible, we’ve continued to reimagine what Search can do with AI. The momentum has been incredible: Just one year after its debut, AI Mode has surpassed one billion monthly users, with queries more than doubling every quarter since launch. As people have realized just how much more Search can do for them, they’re searching more than ever before — so much so that last quarter, we saw queries reach an all-time high.
+Today at I/O, we shared the next step in our journey to bring together the best of a search engine with the best of AI. Here's a look at what we announced.
 
-This roadmap will guide you from absolute beginner to advanced-level in Jetpack Compose — with practical milestones and learning steps. It simplifies and modernizes UI development for Android.
 
-Stage 1: Basics & Fundamentals. Start with introduction to Jetpack Compose and why it was introduced. Learn Compose vs XML key differences, setting up Compose in Android Studio, @Composable annotation, and @Preview for design-time preview.
+Starting today, we’re upgrading Search with Gemini 3.5 Flash — our newest Flash model delivering sustained frontier performance for agents and coding — as the new default model in AI Mode for everyone globally.
+Because your curiosity doesn’t always fit into keywords, we’re also introducing the biggest upgrade to our Search box in over 25 years — now completely reimagined with AI. This intelligent Search box puts our most powerful AI tools right at your fingertips, making it easier to ask your questions.
 
-Progress to theming with Material 3, navigation using Navigation Compose, animations, and state management. Then tackle performance optimization, custom layouts, and integration with existing View-based code.
 
-Advanced topics include multi-module architecture, testing strategies with Compose Testing APIs, and Kotlin Multiplatform with Compose. Consistent practice and code review help internalize best practices faster than theoretical study alone.
+It’s more intuitive than ever, dynamically expanding to give you space to describe exactly what you need. Designed to anticipate your intent, it also helps you formulate your question with AI-powered suggestions that go beyond autocomplete. And you can search across modalities, using text, images, files, videos or Chrome tabs as inputs. You’ll continue to get a range of results from Search, just like you do today. The new intelligent Search box is starting to roll out today, in all countries and languages where AI Mode is available.
+We’re also making it even simpler to continue the conversation with Search. You can easily ask a follow-up question right from an AI Overview, and flow into a conversational back and forth with AI Mode. Your context stays with you, and as you explore more deeply, the links and supporting articles get even more relevant. This seamless experience is live today across desktop and mobile, worldwide.
+
+
+We’re entering the era of Search agents, where you can easily create, customize and manage multiple AI agents for your many tasks, right in Search. We’re starting with information agents. Operating in the background, 24/7, these agents intelligently reason across information to find exactly what you need at exactly the right moment.
+With information agents, you can stay updated on whatever matters most to you. Your agent will intelligently look across everything on the web, like blogs, news sites and social posts, plus our freshest data, such as real-time info on finance, shopping and sports, to monitor for changes related to your specific question.
+It will send you an intelligent, synthesized update, with the ability to take action. So if you’re apartment hunting, you can brain dump all of the exact requirements you’re looking for, and your agent will continuously scan for you, notifying you when listings meet your needs. Or if you want to know the instant any of your favorite pro athletes announce a sneaker collab, your agent will let you know when a new drop lands so you don’t miss out. Information agents will launch first for Google AI Pro & Ultra subscribers this summer.
+
+
+We’re also expanding agentic booking capabilities in Search to a wide range of new tasks, including local experiences and services. Just share your specific criteria — like finding a private karaoke room for six on a Friday night that serves food late — and Search brings together the latest pricing and availability with direct links to finish booking through the provider of your choice. And for select categories like home repair, beauty or pet care, you can ask Google to call businesses on your behalf. These capabilities will roll out to everyone in the U.S. this summer.
+
+
+We’re bringing the power of Google Antigravity and the agentic coding capabilities of Gemini 3.5 Flash right into Search. Search can build the ideal response, in the right format for your question — completely on the fly. So you can get custom generative UI, including visual tools and simulations, tailored precisely to your needs.
+Whether you want to wrap your mind around astrophysics or visualize how your watch works, Search can design custom layouts, assembling components (like interactive visuals, tables, graphs or simulations) in real-time. These generative UI capabilities will be available for everyone in Search this summer, free of charge.
+Finally, for AI to be most helpful, it shouldn't just know the world’s information, it should understand your context, too. So today, we’re expanding Personal Intelligence in AI Mode to more people in nearly 200 countries and territories across 98 languages — no subscription required. You can securely connect apps like Gmail and Google Photos, and soon Google Calendar. Personal Intelligence was designed with transparency, choice and control at its core. You’re always in control — you choose if and when you want to connect apps like Gmail and Google Photos.
+This is the next chapter of Google Search: intelligent AI that puts the world’s information to work for you. So ask whatever’s on your mind, and Search can now do more for you than ever before
+
+
+It’s been a banner year for the Gemini app. Last year at Google I/O, Gemini was serving 400 million users. Today, more than 900 million people across 230 countries and more than 70 languages turn to Gemini for help every month.
+In time for Google I/O 2026, here’s what's new:
+Gemini 3.5 Flash: The first in our next generation of models that combines frontier intelligence with lightning-fast action.
+Neural Expressive: A vibrant, dynamic and completely reimagined design language for Gemini.
+Gemini Omni: Our new model that can seamlessly transform text, images and video prompts into cinematic, high-quality video outputs.
+Daily Brief: A new agent that gives you a personalized morning brief and organizes exactly what you need to know to start your day.
+Gemini Spark: A 24/7 personal AI agent designed to proactively manage tasks and help you navigate your digital life, all under your direction.
+MacOS app: Our desktop app will be integrating Gemini Spark so it can operate on your local machine, and it will also add powerful new voice features.
+
+
+We’ve redesigned the entire Gemini experience from the ground up, introducing a stunning new design language we call Neural Expressive. The interface now features fluid animations, vibrant colors, new typography and haptic feedback.
+We’ve also integrated the Gemini Live conversational experience directly into Gemini. Now, you can seamlessly switch from typing a quick question to diving deep into a free-flowing conversation — and back again — without missing a beat. We also re-engineered the mic so you can tap and talk through a complex idea at your own pace without getting cut off mid-thought. And soon, we’ll start offering regional dialects, allowing you to choose a voice that truly resonates with you.
+Finally, we’re using the power of our Gemini models to make responses more engaging and easier to understand. Instead of throwing a wall of text at you, Gemini now designs tailored responses in real time — incorporating rich imagery, interactive timelines, narrated videos and dynamic graphics.
+Neural Expressive is rolling out globally today across the web, Android and iOS for everyone.
+
+
+To unlock your creative potential, we're introducing Gemini Omni, a model designed to turn your imagination into reality. By seamlessly combining text, images and video inputs, Gemini Omni allows you to generate stunning, high-quality video outputs effortlessly.
+With Gemini Omni, video editing becomes a fluid, natural conversation. You can apply cinematic zooms or swap out backgrounds with a simple prompt. Just upload footage from your camera roll, apply built-in templates with a single tap and create polished content without expensive equipment or specialized technical jargon. You can even drop yourself directly into the action by creating a custom AI avatar that looks and sounds exactly like you.
+Gemini Omni begins rolling out today to Google AI Plus, Pro and Ultra subscribers worldwide
+
         """.trimIndent(),
         category = "android",
         readTime = "9 min read",
@@ -90,15 +204,53 @@ Advanced topics include multi-module architecture, testing strategies with Compo
         urlToImage = "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop",
         publishedAt = "2026-05-22T09:45:00Z",
         content = """
-The combination of Jetpack Compose, MVVM, and Clean Architecture leads to clean, testable, and scalable Android apps. It aligns perfectly with modern development needs in 2025.
+The goal of Search has always been simple: to help you ask anything on your mind — from quick facts to the deep, complex or hyper-specific questions that can be hard to articulate.
+To make this possible, we’ve continued to reimagine what Search can do with AI. The momentum has been incredible: Just one year after its debut, AI Mode has surpassed one billion monthly users, with queries more than doubling every quarter since launch. As people have realized just how much more Search can do for them, they’re searching more than ever before — so much so that last quarter, we saw queries reach an all-time high.
+Today at I/O, we shared the next step in our journey to bring together the best of a search engine with the best of AI. Here's a look at what we announced.
 
-Clean Architecture solves the problem of bloated ViewModels and business logic leaking into UI by creating clear boundaries between layers. Each part of your codebase knows exactly what it should and shouldn’t do.
 
-The three core layers include data, domain, and presentation. In the presentation layer, MVVM handles UI state while Compose renders it declaratively.
+Starting today, we’re upgrading Search with Gemini 3.5 Flash — our newest Flash model delivering sustained frontier performance for agents and coding — as the new default model in AI Mode for everyone globally.
+Because your curiosity doesn’t always fit into keywords, we’re also introducing the biggest upgrade to our Search box in over 25 years — now completely reimagined with AI. This intelligent Search box puts our most powerful AI tools right at your fingertips, making it easier to ask your questions.
 
-This architecture improves code readability, scalability, and testability. Teams adopting this pattern report faster feature development and easier maintenance of large codebases.
 
-Real-world projects benefit significantly from combining these patterns, especially when scaling to support multiple form factors like phones, tablets, and foldables.
+It’s more intuitive than ever, dynamically expanding to give you space to describe exactly what you need. Designed to anticipate your intent, it also helps you formulate your question with AI-powered suggestions that go beyond autocomplete. And you can search across modalities, using text, images, files, videos or Chrome tabs as inputs. You’ll continue to get a range of results from Search, just like you do today. The new intelligent Search box is starting to roll out today, in all countries and languages where AI Mode is available.
+We’re also making it even simpler to continue the conversation with Search. You can easily ask a follow-up question right from an AI Overview, and flow into a conversational back and forth with AI Mode. Your context stays with you, and as you explore more deeply, the links and supporting articles get even more relevant. This seamless experience is live today across desktop and mobile, worldwide.
+
+
+We’re entering the era of Search agents, where you can easily create, customize and manage multiple AI agents for your many tasks, right in Search. We’re starting with information agents. Operating in the background, 24/7, these agents intelligently reason across information to find exactly what you need at exactly the right moment.
+With information agents, you can stay updated on whatever matters most to you. Your agent will intelligently look across everything on the web, like blogs, news sites and social posts, plus our freshest data, such as real-time info on finance, shopping and sports, to monitor for changes related to your specific question.
+It will send you an intelligent, synthesized update, with the ability to take action. So if you’re apartment hunting, you can brain dump all of the exact requirements you’re looking for, and your agent will continuously scan for you, notifying you when listings meet your needs. Or if you want to know the instant any of your favorite pro athletes announce a sneaker collab, your agent will let you know when a new drop lands so you don’t miss out. Information agents will launch first for Google AI Pro & Ultra subscribers this summer.
+
+
+We’re also expanding agentic booking capabilities in Search to a wide range of new tasks, including local experiences and services. Just share your specific criteria — like finding a private karaoke room for six on a Friday night that serves food late — and Search brings together the latest pricing and availability with direct links to finish booking through the provider of your choice. And for select categories like home repair, beauty or pet care, you can ask Google to call businesses on your behalf. These capabilities will roll out to everyone in the U.S. this summer.
+
+
+We’re bringing the power of Google Antigravity and the agentic coding capabilities of Gemini 3.5 Flash right into Search. Search can build the ideal response, in the right format for your question — completely on the fly. So you can get custom generative UI, including visual tools and simulations, tailored precisely to your needs.
+Whether you want to wrap your mind around astrophysics or visualize how your watch works, Search can design custom layouts, assembling components (like interactive visuals, tables, graphs or simulations) in real-time. These generative UI capabilities will be available for everyone in Search this summer, free of charge.
+Finally, for AI to be most helpful, it shouldn't just know the world’s information, it should understand your context, too. So today, we’re expanding Personal Intelligence in AI Mode to more people in nearly 200 countries and territories across 98 languages — no subscription required. You can securely connect apps like Gmail and Google Photos, and soon Google Calendar. Personal Intelligence was designed with transparency, choice and control at its core. You’re always in control — you choose if and when you want to connect apps like Gmail and Google Photos.
+This is the next chapter of Google Search: intelligent AI that puts the world’s information to work for you. So ask whatever’s on your mind, and Search can now do more for you than ever before
+
+
+It’s been a banner year for the Gemini app. Last year at Google I/O, Gemini was serving 400 million users. Today, more than 900 million people across 230 countries and more than 70 languages turn to Gemini for help every month.
+In time for Google I/O 2026, here’s what's new:
+Gemini 3.5 Flash: The first in our next generation of models that combines frontier intelligence with lightning-fast action.
+Neural Expressive: A vibrant, dynamic and completely reimagined design language for Gemini.
+Gemini Omni: Our new model that can seamlessly transform text, images and video prompts into cinematic, high-quality video outputs.
+Daily Brief: A new agent that gives you a personalized morning brief and organizes exactly what you need to know to start your day.
+Gemini Spark: A 24/7 personal AI agent designed to proactively manage tasks and help you navigate your digital life, all under your direction.
+MacOS app: Our desktop app will be integrating Gemini Spark so it can operate on your local machine, and it will also add powerful new voice features.
+
+
+We’ve redesigned the entire Gemini experience from the ground up, introducing a stunning new design language we call Neural Expressive. The interface now features fluid animations, vibrant colors, new typography and haptic feedback.
+We’ve also integrated the Gemini Live conversational experience directly into Gemini. Now, you can seamlessly switch from typing a quick question to diving deep into a free-flowing conversation — and back again — without missing a beat. We also re-engineered the mic so you can tap and talk through a complex idea at your own pace without getting cut off mid-thought. And soon, we’ll start offering regional dialects, allowing you to choose a voice that truly resonates with you.
+Finally, we’re using the power of our Gemini models to make responses more engaging and easier to understand. Instead of throwing a wall of text at you, Gemini now designs tailored responses in real time — incorporating rich imagery, interactive timelines, narrated videos and dynamic graphics.
+Neural Expressive is rolling out globally today across the web, Android and iOS for everyone.
+
+
+To unlock your creative potential, we're introducing Gemini Omni, a model designed to turn your imagination into reality. By seamlessly combining text, images and video inputs, Gemini Omni allows you to generate stunning, high-quality video outputs effortlessly.
+With Gemini Omni, video editing becomes a fluid, natural conversation. You can apply cinematic zooms or swap out backgrounds with a simple prompt. Just upload footage from your camera roll, apply built-in templates with a single tap and create polished content without expensive equipment or specialized technical jargon. You can even drop yourself directly into the action by creating a custom AI avatar that looks and sounds exactly like you.
+Gemini Omni begins rolling out today to Google AI Plus, Pro and Ultra subscribers worldwide
+
         """.trimIndent(),
         category = "android",
         readTime = "6 min read",
@@ -115,15 +267,53 @@ Real-world projects benefit significantly from combining these patterns, especia
         urlToImage = "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?q=80&w=1200&auto=format&fit=crop",
         publishedAt = "2026-05-21T14:20:00Z",
         content = """
-Building complex UIs in Jetpack Compose requires discipline and adherence to proven patterns. Using stateless composables makes your code more reusable and easier to test across different scenarios.
+The goal of Search has always been simple: to help you ask anything on your mind — from quick facts to the deep, complex or hyper-specific questions that can be hard to articulate.
+To make this possible, we’ve continued to reimagine what Search can do with AI. The momentum has been incredible: Just one year after its debut, AI Mode has surpassed one billion monthly users, with queries more than doubling every quarter since launch. As people have realized just how much more Search can do for them, they’re searching more than ever before — so much so that last quarter, we saw queries reach an all-time high.
+Today at I/O, we shared the next step in our journey to bring together the best of a search engine with the best of AI. Here's a look at what we announced.
 
-Break down large screens into smaller, focused composables. This improves readability and allows better control over recomposition boundaries, preventing unnecessary UI updates.
 
-Always be aware of stability. Mark your data classes as @Immutable or @Stable when appropriate to help the Compose compiler optimize effectively and reduce recompositions.
+Starting today, we’re upgrading Search with Gemini 3.5 Flash — our newest Flash model delivering sustained frontier performance for agents and coding — as the new default model in AI Mode for everyone globally.
+Because your curiosity doesn’t always fit into keywords, we’re also introducing the biggest upgrade to our Search box in over 25 years — now completely reimagined with AI. This intelligent Search box puts our most powerful AI tools right at your fingertips, making it easier to ask your questions.
 
-Use derivedStateOf for expensive calculations that depend on other state. This prevents unnecessary recompositions when parent state changes without affecting the derived value.
 
-Proper key usage in Lazy lists and careful management of side effects using LaunchedEffect are critical for performance in production apps with dynamic content.
+It’s more intuitive than ever, dynamically expanding to give you space to describe exactly what you need. Designed to anticipate your intent, it also helps you formulate your question with AI-powered suggestions that go beyond autocomplete. And you can search across modalities, using text, images, files, videos or Chrome tabs as inputs. You’ll continue to get a range of results from Search, just like you do today. The new intelligent Search box is starting to roll out today, in all countries and languages where AI Mode is available.
+We’re also making it even simpler to continue the conversation with Search. You can easily ask a follow-up question right from an AI Overview, and flow into a conversational back and forth with AI Mode. Your context stays with you, and as you explore more deeply, the links and supporting articles get even more relevant. This seamless experience is live today across desktop and mobile, worldwide.
+
+
+We’re entering the era of Search agents, where you can easily create, customize and manage multiple AI agents for your many tasks, right in Search. We’re starting with information agents. Operating in the background, 24/7, these agents intelligently reason across information to find exactly what you need at exactly the right moment.
+With information agents, you can stay updated on whatever matters most to you. Your agent will intelligently look across everything on the web, like blogs, news sites and social posts, plus our freshest data, such as real-time info on finance, shopping and sports, to monitor for changes related to your specific question.
+It will send you an intelligent, synthesized update, with the ability to take action. So if you’re apartment hunting, you can brain dump all of the exact requirements you’re looking for, and your agent will continuously scan for you, notifying you when listings meet your needs. Or if you want to know the instant any of your favorite pro athletes announce a sneaker collab, your agent will let you know when a new drop lands so you don’t miss out. Information agents will launch first for Google AI Pro & Ultra subscribers this summer.
+
+
+We’re also expanding agentic booking capabilities in Search to a wide range of new tasks, including local experiences and services. Just share your specific criteria — like finding a private karaoke room for six on a Friday night that serves food late — and Search brings together the latest pricing and availability with direct links to finish booking through the provider of your choice. And for select categories like home repair, beauty or pet care, you can ask Google to call businesses on your behalf. These capabilities will roll out to everyone in the U.S. this summer.
+
+
+We’re bringing the power of Google Antigravity and the agentic coding capabilities of Gemini 3.5 Flash right into Search. Search can build the ideal response, in the right format for your question — completely on the fly. So you can get custom generative UI, including visual tools and simulations, tailored precisely to your needs.
+Whether you want to wrap your mind around astrophysics or visualize how your watch works, Search can design custom layouts, assembling components (like interactive visuals, tables, graphs or simulations) in real-time. These generative UI capabilities will be available for everyone in Search this summer, free of charge.
+Finally, for AI to be most helpful, it shouldn't just know the world’s information, it should understand your context, too. So today, we’re expanding Personal Intelligence in AI Mode to more people in nearly 200 countries and territories across 98 languages — no subscription required. You can securely connect apps like Gmail and Google Photos, and soon Google Calendar. Personal Intelligence was designed with transparency, choice and control at its core. You’re always in control — you choose if and when you want to connect apps like Gmail and Google Photos.
+This is the next chapter of Google Search: intelligent AI that puts the world’s information to work for you. So ask whatever’s on your mind, and Search can now do more for you than ever before
+
+
+It’s been a banner year for the Gemini app. Last year at Google I/O, Gemini was serving 400 million users. Today, more than 900 million people across 230 countries and more than 70 languages turn to Gemini for help every month.
+In time for Google I/O 2026, here’s what's new:
+Gemini 3.5 Flash: The first in our next generation of models that combines frontier intelligence with lightning-fast action.
+Neural Expressive: A vibrant, dynamic and completely reimagined design language for Gemini.
+Gemini Omni: Our new model that can seamlessly transform text, images and video prompts into cinematic, high-quality video outputs.
+Daily Brief: A new agent that gives you a personalized morning brief and organizes exactly what you need to know to start your day.
+Gemini Spark: A 24/7 personal AI agent designed to proactively manage tasks and help you navigate your digital life, all under your direction.
+MacOS app: Our desktop app will be integrating Gemini Spark so it can operate on your local machine, and it will also add powerful new voice features.
+
+
+We’ve redesigned the entire Gemini experience from the ground up, introducing a stunning new design language we call Neural Expressive. The interface now features fluid animations, vibrant colors, new typography and haptic feedback.
+We’ve also integrated the Gemini Live conversational experience directly into Gemini. Now, you can seamlessly switch from typing a quick question to diving deep into a free-flowing conversation — and back again — without missing a beat. We also re-engineered the mic so you can tap and talk through a complex idea at your own pace without getting cut off mid-thought. And soon, we’ll start offering regional dialects, allowing you to choose a voice that truly resonates with you.
+Finally, we’re using the power of our Gemini models to make responses more engaging and easier to understand. Instead of throwing a wall of text at you, Gemini now designs tailored responses in real time — incorporating rich imagery, interactive timelines, narrated videos and dynamic graphics.
+Neural Expressive is rolling out globally today across the web, Android and iOS for everyone.
+
+
+To unlock your creative potential, we're introducing Gemini Omni, a model designed to turn your imagination into reality. By seamlessly combining text, images and video inputs, Gemini Omni allows you to generate stunning, high-quality video outputs effortlessly.
+With Gemini Omni, video editing becomes a fluid, natural conversation. You can apply cinematic zooms or swap out backgrounds with a simple prompt. Just upload footage from your camera roll, apply built-in templates with a single tap and create polished content without expensive equipment or specialized technical jargon. You can even drop yourself directly into the action by creating a custom AI avatar that looks and sounds exactly like you.
+Gemini Omni begins rolling out today to Google AI Plus, Pro and Ultra subscribers worldwide
+
         """.trimIndent(),
         category = "android",
         readTime = "7 min read",
@@ -140,15 +330,53 @@ Proper key usage in Lazy lists and careful management of side effects using Laun
         urlToImage = "https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=1200&auto=format&fit=crop",
         publishedAt = "2026-05-25T10:00:00Z",
         content = """
-Jetpack Compose simplifies UI development in Android by promoting a declarative approach. However, effective state management is critical to building scalable and maintainable apps.
+The goal of Search has always been simple: to help you ask anything on your mind — from quick facts to the deep, complex or hyper-specific questions that can be hard to articulate.
+To make this possible, we’ve continued to reimagine what Search can do with AI. The momentum has been incredible: Just one year after its debut, AI Mode has surpassed one billion monthly users, with queries more than doubling every quarter since launch. As people have realized just how much more Search can do for them, they’re searching more than ever before — so much so that last quarter, we saw queries reach an all-time high.
+Today at I/O, we shared the next step in our journey to bring together the best of a search engine with the best of AI. Here's a look at what we announced.
 
-This article outlines best practices for managing state in Compose, covering Unidirectional Data Flow (UDF), remember, derivedStateOf, performance optimizations, and edge-case considerations.
 
-Keep state as close to usage as possible. Don’t hoist state higher than necessary. If only one composable needs the state, keep it there to minimize recomposition scope.
+Starting today, we’re upgrading Search with Gemini 3.5 Flash — our newest Flash model delivering sustained frontier performance for agents and coding — as the new default model in AI Mode for everyone globally.
+Because your curiosity doesn’t always fit into keywords, we’re also introducing the biggest upgrade to our Search box in over 25 years — now completely reimagined with AI. This intelligent Search box puts our most powerful AI tools right at your fingertips, making it easier to ask your questions.
 
-Use data classes for complex state instead of multiple mutableStateOf calls. This groups related state and improves code organization significantly.
 
-Avoid recomposition traps by using remember and derivedStateOf appropriately. Apply Unidirectional Data Flow to control state and events for predictable behavior.
+It’s more intuitive than ever, dynamically expanding to give you space to describe exactly what you need. Designed to anticipate your intent, it also helps you formulate your question with AI-powered suggestions that go beyond autocomplete. And you can search across modalities, using text, images, files, videos or Chrome tabs as inputs. You’ll continue to get a range of results from Search, just like you do today. The new intelligent Search box is starting to roll out today, in all countries and languages where AI Mode is available.
+We’re also making it even simpler to continue the conversation with Search. You can easily ask a follow-up question right from an AI Overview, and flow into a conversational back and forth with AI Mode. Your context stays with you, and as you explore more deeply, the links and supporting articles get even more relevant. This seamless experience is live today across desktop and mobile, worldwide.
+
+
+We’re entering the era of Search agents, where you can easily create, customize and manage multiple AI agents for your many tasks, right in Search. We’re starting with information agents. Operating in the background, 24/7, these agents intelligently reason across information to find exactly what you need at exactly the right moment.
+With information agents, you can stay updated on whatever matters most to you. Your agent will intelligently look across everything on the web, like blogs, news sites and social posts, plus our freshest data, such as real-time info on finance, shopping and sports, to monitor for changes related to your specific question.
+It will send you an intelligent, synthesized update, with the ability to take action. So if you’re apartment hunting, you can brain dump all of the exact requirements you’re looking for, and your agent will continuously scan for you, notifying you when listings meet your needs. Or if you want to know the instant any of your favorite pro athletes announce a sneaker collab, your agent will let you know when a new drop lands so you don’t miss out. Information agents will launch first for Google AI Pro & Ultra subscribers this summer.
+
+
+We’re also expanding agentic booking capabilities in Search to a wide range of new tasks, including local experiences and services. Just share your specific criteria — like finding a private karaoke room for six on a Friday night that serves food late — and Search brings together the latest pricing and availability with direct links to finish booking through the provider of your choice. And for select categories like home repair, beauty or pet care, you can ask Google to call businesses on your behalf. These capabilities will roll out to everyone in the U.S. this summer.
+
+
+We’re bringing the power of Google Antigravity and the agentic coding capabilities of Gemini 3.5 Flash right into Search. Search can build the ideal response, in the right format for your question — completely on the fly. So you can get custom generative UI, including visual tools and simulations, tailored precisely to your needs.
+Whether you want to wrap your mind around astrophysics or visualize how your watch works, Search can design custom layouts, assembling components (like interactive visuals, tables, graphs or simulations) in real-time. These generative UI capabilities will be available for everyone in Search this summer, free of charge.
+Finally, for AI to be most helpful, it shouldn't just know the world’s information, it should understand your context, too. So today, we’re expanding Personal Intelligence in AI Mode to more people in nearly 200 countries and territories across 98 languages — no subscription required. You can securely connect apps like Gmail and Google Photos, and soon Google Calendar. Personal Intelligence was designed with transparency, choice and control at its core. You’re always in control — you choose if and when you want to connect apps like Gmail and Google Photos.
+This is the next chapter of Google Search: intelligent AI that puts the world’s information to work for you. So ask whatever’s on your mind, and Search can now do more for you than ever before
+
+
+It’s been a banner year for the Gemini app. Last year at Google I/O, Gemini was serving 400 million users. Today, more than 900 million people across 230 countries and more than 70 languages turn to Gemini for help every month.
+In time for Google I/O 2026, here’s what's new:
+Gemini 3.5 Flash: The first in our next generation of models that combines frontier intelligence with lightning-fast action.
+Neural Expressive: A vibrant, dynamic and completely reimagined design language for Gemini.
+Gemini Omni: Our new model that can seamlessly transform text, images and video prompts into cinematic, high-quality video outputs.
+Daily Brief: A new agent that gives you a personalized morning brief and organizes exactly what you need to know to start your day.
+Gemini Spark: A 24/7 personal AI agent designed to proactively manage tasks and help you navigate your digital life, all under your direction.
+MacOS app: Our desktop app will be integrating Gemini Spark so it can operate on your local machine, and it will also add powerful new voice features.
+
+
+We’ve redesigned the entire Gemini experience from the ground up, introducing a stunning new design language we call Neural Expressive. The interface now features fluid animations, vibrant colors, new typography and haptic feedback.
+We’ve also integrated the Gemini Live conversational experience directly into Gemini. Now, you can seamlessly switch from typing a quick question to diving deep into a free-flowing conversation — and back again — without missing a beat. We also re-engineered the mic so you can tap and talk through a complex idea at your own pace without getting cut off mid-thought. And soon, we’ll start offering regional dialects, allowing you to choose a voice that truly resonates with you.
+Finally, we’re using the power of our Gemini models to make responses more engaging and easier to understand. Instead of throwing a wall of text at you, Gemini now designs tailored responses in real time — incorporating rich imagery, interactive timelines, narrated videos and dynamic graphics.
+Neural Expressive is rolling out globally today across the web, Android and iOS for everyone.
+
+
+To unlock your creative potential, we're introducing Gemini Omni, a model designed to turn your imagination into reality. By seamlessly combining text, images and video inputs, Gemini Omni allows you to generate stunning, high-quality video outputs effortlessly.
+With Gemini Omni, video editing becomes a fluid, natural conversation. You can apply cinematic zooms or swap out backgrounds with a simple prompt. Just upload footage from your camera roll, apply built-in templates with a single tap and create polished content without expensive equipment or specialized technical jargon. You can even drop yourself directly into the action by creating a custom AI avatar that looks and sounds exactly like you.
+Gemini Omni begins rolling out today to Google AI Plus, Pro and Ultra subscribers worldwide
+
         """.trimIndent(),
         category = "android",
         readTime = "6 min read",
@@ -165,15 +393,53 @@ Avoid recomposition traps by using remember and derivedStateOf appropriately. Ap
         urlToImage = "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop",
         publishedAt = "2026-05-24T11:30:00Z",
         content = """
-After three years of working with Jetpack Compose in production, several key lessons stand out. Early adoption required patience but paid off significantly in terms of development speed.
+The goal of Search has always been simple: to help you ask anything on your mind — from quick facts to the deep, complex or hyper-specific questions that can be hard to articulate.
+To make this possible, we’ve continued to reimagine what Search can do with AI. The momentum has been incredible: Just one year after its debut, AI Mode has surpassed one billion monthly users, with queries more than doubling every quarter since launch. As people have realized just how much more Search can do for them, they’re searching more than ever before — so much so that last quarter, we saw queries reach an all-time high.
+Today at I/O, we shared the next step in our journey to bring together the best of a search engine with the best of AI. Here's a look at what we announced.
 
-Composition locals and custom modifiers became powerful tools once understood properly. They help reduce boilerplate while maintaining clean architecture and separation of concerns.
 
-Performance tuning through smart recomposition control was one of the biggest challenges. Learning to think in terms of stability transformed app responsiveness and user experience.
+Starting today, we’re upgrading Search with Gemini 3.5 Flash — our newest Flash model delivering sustained frontier performance for agents and coding — as the new default model in AI Mode for everyone globally.
+Because your curiosity doesn’t always fit into keywords, we’re also introducing the biggest upgrade to our Search box in over 25 years — now completely reimagined with AI. This intelligent Search box puts our most powerful AI tools right at your fingertips, making it easier to ask your questions.
 
-Migration strategies from the View system to Compose should be incremental. Full rewrites are risky, but partial migrations can deliver value quickly to users.
 
-The developer experience continues to improve with each Android Studio release, making Compose development increasingly enjoyable and productive for large teams.
+It’s more intuitive than ever, dynamically expanding to give you space to describe exactly what you need. Designed to anticipate your intent, it also helps you formulate your question with AI-powered suggestions that go beyond autocomplete. And you can search across modalities, using text, images, files, videos or Chrome tabs as inputs. You’ll continue to get a range of results from Search, just like you do today. The new intelligent Search box is starting to roll out today, in all countries and languages where AI Mode is available.
+We’re also making it even simpler to continue the conversation with Search. You can easily ask a follow-up question right from an AI Overview, and flow into a conversational back and forth with AI Mode. Your context stays with you, and as you explore more deeply, the links and supporting articles get even more relevant. This seamless experience is live today across desktop and mobile, worldwide.
+
+
+We’re entering the era of Search agents, where you can easily create, customize and manage multiple AI agents for your many tasks, right in Search. We’re starting with information agents. Operating in the background, 24/7, these agents intelligently reason across information to find exactly what you need at exactly the right moment.
+With information agents, you can stay updated on whatever matters most to you. Your agent will intelligently look across everything on the web, like blogs, news sites and social posts, plus our freshest data, such as real-time info on finance, shopping and sports, to monitor for changes related to your specific question.
+It will send you an intelligent, synthesized update, with the ability to take action. So if you’re apartment hunting, you can brain dump all of the exact requirements you’re looking for, and your agent will continuously scan for you, notifying you when listings meet your needs. Or if you want to know the instant any of your favorite pro athletes announce a sneaker collab, your agent will let you know when a new drop lands so you don’t miss out. Information agents will launch first for Google AI Pro & Ultra subscribers this summer.
+
+
+We’re also expanding agentic booking capabilities in Search to a wide range of new tasks, including local experiences and services. Just share your specific criteria — like finding a private karaoke room for six on a Friday night that serves food late — and Search brings together the latest pricing and availability with direct links to finish booking through the provider of your choice. And for select categories like home repair, beauty or pet care, you can ask Google to call businesses on your behalf. These capabilities will roll out to everyone in the U.S. this summer.
+
+
+We’re bringing the power of Google Antigravity and the agentic coding capabilities of Gemini 3.5 Flash right into Search. Search can build the ideal response, in the right format for your question — completely on the fly. So you can get custom generative UI, including visual tools and simulations, tailored precisely to your needs.
+Whether you want to wrap your mind around astrophysics or visualize how your watch works, Search can design custom layouts, assembling components (like interactive visuals, tables, graphs or simulations) in real-time. These generative UI capabilities will be available for everyone in Search this summer, free of charge.
+Finally, for AI to be most helpful, it shouldn't just know the world’s information, it should understand your context, too. So today, we’re expanding Personal Intelligence in AI Mode to more people in nearly 200 countries and territories across 98 languages — no subscription required. You can securely connect apps like Gmail and Google Photos, and soon Google Calendar. Personal Intelligence was designed with transparency, choice and control at its core. You’re always in control — you choose if and when you want to connect apps like Gmail and Google Photos.
+This is the next chapter of Google Search: intelligent AI that puts the world’s information to work for you. So ask whatever’s on your mind, and Search can now do more for you than ever before
+
+
+It’s been a banner year for the Gemini app. Last year at Google I/O, Gemini was serving 400 million users. Today, more than 900 million people across 230 countries and more than 70 languages turn to Gemini for help every month.
+In time for Google I/O 2026, here’s what's new:
+Gemini 3.5 Flash: The first in our next generation of models that combines frontier intelligence with lightning-fast action.
+Neural Expressive: A vibrant, dynamic and completely reimagined design language for Gemini.
+Gemini Omni: Our new model that can seamlessly transform text, images and video prompts into cinematic, high-quality video outputs.
+Daily Brief: A new agent that gives you a personalized morning brief and organizes exactly what you need to know to start your day.
+Gemini Spark: A 24/7 personal AI agent designed to proactively manage tasks and help you navigate your digital life, all under your direction.
+MacOS app: Our desktop app will be integrating Gemini Spark so it can operate on your local machine, and it will also add powerful new voice features.
+
+
+We’ve redesigned the entire Gemini experience from the ground up, introducing a stunning new design language we call Neural Expressive. The interface now features fluid animations, vibrant colors, new typography and haptic feedback.
+We’ve also integrated the Gemini Live conversational experience directly into Gemini. Now, you can seamlessly switch from typing a quick question to diving deep into a free-flowing conversation — and back again — without missing a beat. We also re-engineered the mic so you can tap and talk through a complex idea at your own pace without getting cut off mid-thought. And soon, we’ll start offering regional dialects, allowing you to choose a voice that truly resonates with you.
+Finally, we’re using the power of our Gemini models to make responses more engaging and easier to understand. Instead of throwing a wall of text at you, Gemini now designs tailored responses in real time — incorporating rich imagery, interactive timelines, narrated videos and dynamic graphics.
+Neural Expressive is rolling out globally today across the web, Android and iOS for everyone.
+
+
+To unlock your creative potential, we're introducing Gemini Omni, a model designed to turn your imagination into reality. By seamlessly combining text, images and video inputs, Gemini Omni allows you to generate stunning, high-quality video outputs effortlessly.
+With Gemini Omni, video editing becomes a fluid, natural conversation. You can apply cinematic zooms or swap out backgrounds with a simple prompt. Just upload footage from your camera roll, apply built-in templates with a single tap and create polished content without expensive equipment or specialized technical jargon. You can even drop yourself directly into the action by creating a custom AI avatar that looks and sounds exactly like you.
+Gemini Omni begins rolling out today to Google AI Plus, Pro and Ultra subscribers worldwide
+
         """.trimIndent(),
         category = "android",
         readTime = "6 min read",
@@ -190,15 +456,53 @@ The developer experience continues to improve with each Android Studio release, 
         urlToImage = "https://images.unsplash.com/photo-1633419461186-7d40a38105ec?q=80&w=1200&auto=format&fit=crop",
         publishedAt = "2026-05-23T16:45:00Z",
         content = """
-Optimizing Jetpack Compose screens requires systematic measurement and targeted improvements. One developer achieved 3x faster rendering through careful refactoring and profiling.
+The goal of Search has always been simple: to help you ask anything on your mind — from quick facts to the deep, complex or hyper-specific questions that can be hard to articulate.
+To make this possible, we’ve continued to reimagine what Search can do with AI. The momentum has been incredible: Just one year after its debut, AI Mode has surpassed one billion monthly users, with queries more than doubling every quarter since launch. As people have realized just how much more Search can do for them, they’re searching more than ever before — so much so that last quarter, we saw queries reach an all-time high.
+Today at I/O, we shared the next step in our journey to bring together the best of a search engine with the best of AI. Here's a look at what we announced.
 
-Key techniques included reducing recomposition scope, using stable parameters, and implementing proper key usage in lazy lists for better diffing.
 
-Layout profiling tools in Android Studio helped identify bottlenecks. Visualizing recomposition counts guided optimization efforts effectively throughout the process.
+Starting today, we’re upgrading Search with Gemini 3.5 Flash — our newest Flash model delivering sustained frontier performance for agents and coding — as the new default model in AI Mode for everyone globally.
+Because your curiosity doesn’t always fit into keywords, we’re also introducing the biggest upgrade to our Search box in over 25 years — now completely reimagined with AI. This intelligent Search box puts our most powerful AI tools right at your fingertips, making it easier to ask your questions.
 
-Memory allocation patterns were analyzed and improved by minimizing object creation during composition phases, leading to smoother scrolling.
 
-The results demonstrate that with proper techniques, Compose can deliver buttery smooth performance even in complex, data-heavy UIs.
+It’s more intuitive than ever, dynamically expanding to give you space to describe exactly what you need. Designed to anticipate your intent, it also helps you formulate your question with AI-powered suggestions that go beyond autocomplete. And you can search across modalities, using text, images, files, videos or Chrome tabs as inputs. You’ll continue to get a range of results from Search, just like you do today. The new intelligent Search box is starting to roll out today, in all countries and languages where AI Mode is available.
+We’re also making it even simpler to continue the conversation with Search. You can easily ask a follow-up question right from an AI Overview, and flow into a conversational back and forth with AI Mode. Your context stays with you, and as you explore more deeply, the links and supporting articles get even more relevant. This seamless experience is live today across desktop and mobile, worldwide.
+
+
+We’re entering the era of Search agents, where you can easily create, customize and manage multiple AI agents for your many tasks, right in Search. We’re starting with information agents. Operating in the background, 24/7, these agents intelligently reason across information to find exactly what you need at exactly the right moment.
+With information agents, you can stay updated on whatever matters most to you. Your agent will intelligently look across everything on the web, like blogs, news sites and social posts, plus our freshest data, such as real-time info on finance, shopping and sports, to monitor for changes related to your specific question.
+It will send you an intelligent, synthesized update, with the ability to take action. So if you’re apartment hunting, you can brain dump all of the exact requirements you’re looking for, and your agent will continuously scan for you, notifying you when listings meet your needs. Or if you want to know the instant any of your favorite pro athletes announce a sneaker collab, your agent will let you know when a new drop lands so you don’t miss out. Information agents will launch first for Google AI Pro & Ultra subscribers this summer.
+
+
+We’re also expanding agentic booking capabilities in Search to a wide range of new tasks, including local experiences and services. Just share your specific criteria — like finding a private karaoke room for six on a Friday night that serves food late — and Search brings together the latest pricing and availability with direct links to finish booking through the provider of your choice. And for select categories like home repair, beauty or pet care, you can ask Google to call businesses on your behalf. These capabilities will roll out to everyone in the U.S. this summer.
+
+
+We’re bringing the power of Google Antigravity and the agentic coding capabilities of Gemini 3.5 Flash right into Search. Search can build the ideal response, in the right format for your question — completely on the fly. So you can get custom generative UI, including visual tools and simulations, tailored precisely to your needs.
+Whether you want to wrap your mind around astrophysics or visualize how your watch works, Search can design custom layouts, assembling components (like interactive visuals, tables, graphs or simulations) in real-time. These generative UI capabilities will be available for everyone in Search this summer, free of charge.
+Finally, for AI to be most helpful, it shouldn't just know the world’s information, it should understand your context, too. So today, we’re expanding Personal Intelligence in AI Mode to more people in nearly 200 countries and territories across 98 languages — no subscription required. You can securely connect apps like Gmail and Google Photos, and soon Google Calendar. Personal Intelligence was designed with transparency, choice and control at its core. You’re always in control — you choose if and when you want to connect apps like Gmail and Google Photos.
+This is the next chapter of Google Search: intelligent AI that puts the world’s information to work for you. So ask whatever’s on your mind, and Search can now do more for you than ever before
+
+
+It’s been a banner year for the Gemini app. Last year at Google I/O, Gemini was serving 400 million users. Today, more than 900 million people across 230 countries and more than 70 languages turn to Gemini for help every month.
+In time for Google I/O 2026, here’s what's new:
+Gemini 3.5 Flash: The first in our next generation of models that combines frontier intelligence with lightning-fast action.
+Neural Expressive: A vibrant, dynamic and completely reimagined design language for Gemini.
+Gemini Omni: Our new model that can seamlessly transform text, images and video prompts into cinematic, high-quality video outputs.
+Daily Brief: A new agent that gives you a personalized morning brief and organizes exactly what you need to know to start your day.
+Gemini Spark: A 24/7 personal AI agent designed to proactively manage tasks and help you navigate your digital life, all under your direction.
+MacOS app: Our desktop app will be integrating Gemini Spark so it can operate on your local machine, and it will also add powerful new voice features.
+
+
+We’ve redesigned the entire Gemini experience from the ground up, introducing a stunning new design language we call Neural Expressive. The interface now features fluid animations, vibrant colors, new typography and haptic feedback.
+We’ve also integrated the Gemini Live conversational experience directly into Gemini. Now, you can seamlessly switch from typing a quick question to diving deep into a free-flowing conversation — and back again — without missing a beat. We also re-engineered the mic so you can tap and talk through a complex idea at your own pace without getting cut off mid-thought. And soon, we’ll start offering regional dialects, allowing you to choose a voice that truly resonates with you.
+Finally, we’re using the power of our Gemini models to make responses more engaging and easier to understand. Instead of throwing a wall of text at you, Gemini now designs tailored responses in real time — incorporating rich imagery, interactive timelines, narrated videos and dynamic graphics.
+Neural Expressive is rolling out globally today across the web, Android and iOS for everyone.
+
+
+To unlock your creative potential, we're introducing Gemini Omni, a model designed to turn your imagination into reality. By seamlessly combining text, images and video inputs, Gemini Omni allows you to generate stunning, high-quality video outputs effortlessly.
+With Gemini Omni, video editing becomes a fluid, natural conversation. You can apply cinematic zooms or swap out backgrounds with a simple prompt. Just upload footage from your camera roll, apply built-in templates with a single tap and create polished content without expensive equipment or specialized technical jargon. You can even drop yourself directly into the action by creating a custom AI avatar that looks and sounds exactly like you.
+Gemini Omni begins rolling out today to Google AI Plus, Pro and Ultra subscribers worldwide
+
         """.trimIndent(),
         category = "android",
         readTime = "5 min read",
@@ -215,15 +519,53 @@ The results demonstrate that with proper techniques, Compose can deliver buttery
         urlToImage = "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop",
         publishedAt = "2026-05-22T13:20:00Z",
         content = """
-Clean Architecture principles remain highly relevant in the Compose era. Separating concerns across layers ensures testability and maintainability as apps grow in complexity.
+The goal of Search has always been simple: to help you ask anything on your mind — from quick facts to the deep, complex or hyper-specific questions that can be hard to articulate.
+To make this possible, we’ve continued to reimagine what Search can do with AI. The momentum has been incredible: Just one year after its debut, AI Mode has surpassed one billion monthly users, with queries more than doubling every quarter since launch. As people have realized just how much more Search can do for them, they’re searching more than ever before — so much so that last quarter, we saw queries reach an all-time high.
+Today at I/O, we shared the next step in our journey to bring together the best of a search engine with the best of AI. Here's a look at what we announced.
 
-Use cases should remain pure and independent of UI frameworks. This allows easy sharing of business logic via Kotlin Multiplatform in the future.
 
-Hilt for dependency injection combined with ViewModels and Compose state handling creates a robust architecture foundation that scales well.
+Starting today, we’re upgrading Search with Gemini 3.5 Flash — our newest Flash model delivering sustained frontier performance for agents and coding — as the new default model in AI Mode for everyone globally.
+Because your curiosity doesn’t always fit into keywords, we’re also introducing the biggest upgrade to our Search box in over 25 years — now completely reimagined with AI. This intelligent Search box puts our most powerful AI tools right at your fingertips, making it easier to ask your questions.
 
-Repository pattern with proper data source abstraction handles offline scenarios elegantly using Room and remote data sources.
 
-This combination of Clean Architecture and Jetpack Compose represents the current state-of-the-art for professional Android development in 2025 and beyond.
+It’s more intuitive than ever, dynamically expanding to give you space to describe exactly what you need. Designed to anticipate your intent, it also helps you formulate your question with AI-powered suggestions that go beyond autocomplete. And you can search across modalities, using text, images, files, videos or Chrome tabs as inputs. You’ll continue to get a range of results from Search, just like you do today. The new intelligent Search box is starting to roll out today, in all countries and languages where AI Mode is available.
+We’re also making it even simpler to continue the conversation with Search. You can easily ask a follow-up question right from an AI Overview, and flow into a conversational back and forth with AI Mode. Your context stays with you, and as you explore more deeply, the links and supporting articles get even more relevant. This seamless experience is live today across desktop and mobile, worldwide.
+
+
+We’re entering the era of Search agents, where you can easily create, customize and manage multiple AI agents for your many tasks, right in Search. We’re starting with information agents. Operating in the background, 24/7, these agents intelligently reason across information to find exactly what you need at exactly the right moment.
+With information agents, you can stay updated on whatever matters most to you. Your agent will intelligently look across everything on the web, like blogs, news sites and social posts, plus our freshest data, such as real-time info on finance, shopping and sports, to monitor for changes related to your specific question.
+It will send you an intelligent, synthesized update, with the ability to take action. So if you’re apartment hunting, you can brain dump all of the exact requirements you’re looking for, and your agent will continuously scan for you, notifying you when listings meet your needs. Or if you want to know the instant any of your favorite pro athletes announce a sneaker collab, your agent will let you know when a new drop lands so you don’t miss out. Information agents will launch first for Google AI Pro & Ultra subscribers this summer.
+
+
+We’re also expanding agentic booking capabilities in Search to a wide range of new tasks, including local experiences and services. Just share your specific criteria — like finding a private karaoke room for six on a Friday night that serves food late — and Search brings together the latest pricing and availability with direct links to finish booking through the provider of your choice. And for select categories like home repair, beauty or pet care, you can ask Google to call businesses on your behalf. These capabilities will roll out to everyone in the U.S. this summer.
+
+
+We’re bringing the power of Google Antigravity and the agentic coding capabilities of Gemini 3.5 Flash right into Search. Search can build the ideal response, in the right format for your question — completely on the fly. So you can get custom generative UI, including visual tools and simulations, tailored precisely to your needs.
+Whether you want to wrap your mind around astrophysics or visualize how your watch works, Search can design custom layouts, assembling components (like interactive visuals, tables, graphs or simulations) in real-time. These generative UI capabilities will be available for everyone in Search this summer, free of charge.
+Finally, for AI to be most helpful, it shouldn't just know the world’s information, it should understand your context, too. So today, we’re expanding Personal Intelligence in AI Mode to more people in nearly 200 countries and territories across 98 languages — no subscription required. You can securely connect apps like Gmail and Google Photos, and soon Google Calendar. Personal Intelligence was designed with transparency, choice and control at its core. You’re always in control — you choose if and when you want to connect apps like Gmail and Google Photos.
+This is the next chapter of Google Search: intelligent AI that puts the world’s information to work for you. So ask whatever’s on your mind, and Search can now do more for you than ever before
+
+
+It’s been a banner year for the Gemini app. Last year at Google I/O, Gemini was serving 400 million users. Today, more than 900 million people across 230 countries and more than 70 languages turn to Gemini for help every month.
+In time for Google I/O 2026, here’s what's new:
+Gemini 3.5 Flash: The first in our next generation of models that combines frontier intelligence with lightning-fast action.
+Neural Expressive: A vibrant, dynamic and completely reimagined design language for Gemini.
+Gemini Omni: Our new model that can seamlessly transform text, images and video prompts into cinematic, high-quality video outputs.
+Daily Brief: A new agent that gives you a personalized morning brief and organizes exactly what you need to know to start your day.
+Gemini Spark: A 24/7 personal AI agent designed to proactively manage tasks and help you navigate your digital life, all under your direction.
+MacOS app: Our desktop app will be integrating Gemini Spark so it can operate on your local machine, and it will also add powerful new voice features.
+
+
+We’ve redesigned the entire Gemini experience from the ground up, introducing a stunning new design language we call Neural Expressive. The interface now features fluid animations, vibrant colors, new typography and haptic feedback.
+We’ve also integrated the Gemini Live conversational experience directly into Gemini. Now, you can seamlessly switch from typing a quick question to diving deep into a free-flowing conversation — and back again — without missing a beat. We also re-engineered the mic so you can tap and talk through a complex idea at your own pace without getting cut off mid-thought. And soon, we’ll start offering regional dialects, allowing you to choose a voice that truly resonates with you.
+Finally, we’re using the power of our Gemini models to make responses more engaging and easier to understand. Instead of throwing a wall of text at you, Gemini now designs tailored responses in real time — incorporating rich imagery, interactive timelines, narrated videos and dynamic graphics.
+Neural Expressive is rolling out globally today across the web, Android and iOS for everyone.
+
+
+To unlock your creative potential, we're introducing Gemini Omni, a model designed to turn your imagination into reality. By seamlessly combining text, images and video inputs, Gemini Omni allows you to generate stunning, high-quality video outputs effortlessly.
+With Gemini Omni, video editing becomes a fluid, natural conversation. You can apply cinematic zooms or swap out backgrounds with a simple prompt. Just upload footage from your camera roll, apply built-in templates with a single tap and create polished content without expensive equipment or specialized technical jargon. You can even drop yourself directly into the action by creating a custom AI avatar that looks and sounds exactly like you.
+Gemini Omni begins rolling out today to Google AI Plus, Pro and Ultra subscribers worldwide
+
         """.trimIndent(),
         category = "android",
         readTime = "7 min read",
@@ -240,15 +582,53 @@ This combination of Clean Architecture and Jetpack Compose represents the curren
         urlToImage = "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
         publishedAt = "2026-05-19T18:00:00Z",
         content = """
-Jetpack Compose is Android's modern toolkit for building native UIs using Kotlin. It eliminates much of the traditional XML and View binding boilerplate that developers used to deal with.
+The goal of Search has always been simple: to help you ask anything on your mind — from quick facts to the deep, complex or hyper-specific questions that can be hard to articulate.
+To make this possible, we’ve continued to reimagine what Search can do with AI. The momentum has been incredible: Just one year after its debut, AI Mode has surpassed one billion monthly users, with queries more than doubling every quarter since launch. As people have realized just how much more Search can do for them, they’re searching more than ever before — so much so that last quarter, we saw queries reach an all-time high.
+Today at I/O, we shared the next step in our journey to bring together the best of a search engine with the best of AI. Here's a look at what we announced.
 
-Composables are the fundamental building blocks. They are regular Kotlin functions annotated with @Composable that describe your UI in a declarative way.
 
-State management drives UI updates. Whenever state changes, Compose intelligently recomposes only the affected parts of the UI tree for efficiency.
+Starting today, we’re upgrading Search with Gemini 3.5 Flash — our newest Flash model delivering sustained frontier performance for agents and coding — as the new default model in AI Mode for everyone globally.
+Because your curiosity doesn’t always fit into keywords, we’re also introducing the biggest upgrade to our Search box in over 25 years — now completely reimagined with AI. This intelligent Search box puts our most powerful AI tools right at your fingertips, making it easier to ask your questions.
 
-Modifiers allow you to customize layout, appearance, and behavior of composables in a flexible and chainable way, similar to CSS but in code.
 
-Understanding these basics provides a strong foundation for building more complex and performant applications with Compose as you advance in your Android journey.
+It’s more intuitive than ever, dynamically expanding to give you space to describe exactly what you need. Designed to anticipate your intent, it also helps you formulate your question with AI-powered suggestions that go beyond autocomplete. And you can search across modalities, using text, images, files, videos or Chrome tabs as inputs. You’ll continue to get a range of results from Search, just like you do today. The new intelligent Search box is starting to roll out today, in all countries and languages where AI Mode is available.
+We’re also making it even simpler to continue the conversation with Search. You can easily ask a follow-up question right from an AI Overview, and flow into a conversational back and forth with AI Mode. Your context stays with you, and as you explore more deeply, the links and supporting articles get even more relevant. This seamless experience is live today across desktop and mobile, worldwide.
+
+
+We’re entering the era of Search agents, where you can easily create, customize and manage multiple AI agents for your many tasks, right in Search. We’re starting with information agents. Operating in the background, 24/7, these agents intelligently reason across information to find exactly what you need at exactly the right moment.
+With information agents, you can stay updated on whatever matters most to you. Your agent will intelligently look across everything on the web, like blogs, news sites and social posts, plus our freshest data, such as real-time info on finance, shopping and sports, to monitor for changes related to your specific question.
+It will send you an intelligent, synthesized update, with the ability to take action. So if you’re apartment hunting, you can brain dump all of the exact requirements you’re looking for, and your agent will continuously scan for you, notifying you when listings meet your needs. Or if you want to know the instant any of your favorite pro athletes announce a sneaker collab, your agent will let you know when a new drop lands so you don’t miss out. Information agents will launch first for Google AI Pro & Ultra subscribers this summer.
+
+
+We’re also expanding agentic booking capabilities in Search to a wide range of new tasks, including local experiences and services. Just share your specific criteria — like finding a private karaoke room for six on a Friday night that serves food late — and Search brings together the latest pricing and availability with direct links to finish booking through the provider of your choice. And for select categories like home repair, beauty or pet care, you can ask Google to call businesses on your behalf. These capabilities will roll out to everyone in the U.S. this summer.
+
+
+We’re bringing the power of Google Antigravity and the agentic coding capabilities of Gemini 3.5 Flash right into Search. Search can build the ideal response, in the right format for your question — completely on the fly. So you can get custom generative UI, including visual tools and simulations, tailored precisely to your needs.
+Whether you want to wrap your mind around astrophysics or visualize how your watch works, Search can design custom layouts, assembling components (like interactive visuals, tables, graphs or simulations) in real-time. These generative UI capabilities will be available for everyone in Search this summer, free of charge.
+Finally, for AI to be most helpful, it shouldn't just know the world’s information, it should understand your context, too. So today, we’re expanding Personal Intelligence in AI Mode to more people in nearly 200 countries and territories across 98 languages — no subscription required. You can securely connect apps like Gmail and Google Photos, and soon Google Calendar. Personal Intelligence was designed with transparency, choice and control at its core. You’re always in control — you choose if and when you want to connect apps like Gmail and Google Photos.
+This is the next chapter of Google Search: intelligent AI that puts the world’s information to work for you. So ask whatever’s on your mind, and Search can now do more for you than ever before
+
+
+It’s been a banner year for the Gemini app. Last year at Google I/O, Gemini was serving 400 million users. Today, more than 900 million people across 230 countries and more than 70 languages turn to Gemini for help every month.
+In time for Google I/O 2026, here’s what's new:
+Gemini 3.5 Flash: The first in our next generation of models that combines frontier intelligence with lightning-fast action.
+Neural Expressive: A vibrant, dynamic and completely reimagined design language for Gemini.
+Gemini Omni: Our new model that can seamlessly transform text, images and video prompts into cinematic, high-quality video outputs.
+Daily Brief: A new agent that gives you a personalized morning brief and organizes exactly what you need to know to start your day.
+Gemini Spark: A 24/7 personal AI agent designed to proactively manage tasks and help you navigate your digital life, all under your direction.
+MacOS app: Our desktop app will be integrating Gemini Spark so it can operate on your local machine, and it will also add powerful new voice features.
+
+
+We’ve redesigned the entire Gemini experience from the ground up, introducing a stunning new design language we call Neural Expressive. The interface now features fluid animations, vibrant colors, new typography and haptic feedback.
+We’ve also integrated the Gemini Live conversational experience directly into Gemini. Now, you can seamlessly switch from typing a quick question to diving deep into a free-flowing conversation — and back again — without missing a beat. We also re-engineered the mic so you can tap and talk through a complex idea at your own pace without getting cut off mid-thought. And soon, we’ll start offering regional dialects, allowing you to choose a voice that truly resonates with you.
+Finally, we’re using the power of our Gemini models to make responses more engaging and easier to understand. Instead of throwing a wall of text at you, Gemini now designs tailored responses in real time — incorporating rich imagery, interactive timelines, narrated videos and dynamic graphics.
+Neural Expressive is rolling out globally today across the web, Android and iOS for everyone.
+
+
+To unlock your creative potential, we're introducing Gemini Omni, a model designed to turn your imagination into reality. By seamlessly combining text, images and video inputs, Gemini Omni allows you to generate stunning, high-quality video outputs effortlessly.
+With Gemini Omni, video editing becomes a fluid, natural conversation. You can apply cinematic zooms or swap out backgrounds with a simple prompt. Just upload footage from your camera roll, apply built-in templates with a single tap and create polished content without expensive equipment or specialized technical jargon. You can even drop yourself directly into the action by creating a custom AI avatar that looks and sounds exactly like you.
+Gemini Omni begins rolling out today to Google AI Plus, Pro and Ultra subscribers worldwide
+
         """.trimIndent(),
         category = "android",
         readTime = "5 min read",
