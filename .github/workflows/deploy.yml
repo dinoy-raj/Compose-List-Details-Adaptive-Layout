@@ -33,10 +33,13 @@ jobs:
       - name: Build Web App (WASM + JS fallback)
         run: ./gradlew :webApp:composeCompatibilityBrowserDistribution
 
+      - name: List build output
+        run: ls -R webApp/build/dist
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: webApp/build/dist/composeCompatibilityBrowserDistribution
+          path: webApp/build/dist
 
   deploy:
     needs: build
